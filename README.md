@@ -1,21 +1,21 @@
 Hello,
-I am a beginner lerning this at 52 years old.  You can teach an old dog new tricks, and they will be good at it.
 
-i have been in the tech industry since i was 17, so about 35 years experience in broadcasging, television, music recording, studio design, installatoin and integration, studio recoding,
-just about every part under the sky if the project was going to the air. 
+I am a beginner learning this at 52 years old. You can teach an old dog new tricks, and they will be good at it.
 
-I find myself "between jobs" at this time, my last employer why by contract I am not allowed to mention told me after 10 of loyal and devoted employment, that they think it was a
-good time for us to to our seperate ways.
+I have been in the tech industry since I was 17, so I have about 35 years of experience in broadcasting, television, music recording, studio design, installation and integration, studio recording—just about every part under the sky if the project was going to air.
 
-Stumbling around a month I found these boot camps, so I am learning coding. Because 35 years of high-tech industry experience and being able to code should be a good thing, and hireable. Right?
+I find myself "between jobs" at this time. My last employer, whom I am not allowed to mention by contract, told me after 10 years of loyal and devoted employment that they thought it was a good time for us to go our separate ways.
 
-So I am learning code and exploring my abilities as I continue to learn.
+After stumbling around for a month, I found these boot camps and started learning coding. With 35 years of high-tech industry experience, being able to code should be a good thing and make me hireable, right?
 
-if you have any questions, insights or just want to vent, you can reach me at:
+So, I am learning code and exploring my abilities as I continue to learn.
+
+If you have any questions, insights, or just want to vent, you can reach me at:
 
 kjwagner613@gmail.com
 
-i do check it once in awhile. 
+I do check it once in a while.
 
-thanks and have a wonderful day
+Thanks, and have a wonderful day,
+
 -K
