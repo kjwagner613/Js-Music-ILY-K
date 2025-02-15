@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
   width: 100vw;
 }
 
@@ -65,7 +66,14 @@ li:active {
   body {
     padding: 10px;
   }
-  .play-button, .pause-button, .next-button, .mute-button, .volume-up-button, .volume-down-button, .song-title, remaining-time {
+  .play-button,
+  .pause-button,
+  .next-button,
+  .mute-button,
+  .volume-up-button,
+  .volume-down-button,
+  .song-title,
+  remaining-time {
     position: absolute;
     background-color: transparent;
     border: none;
@@ -82,7 +90,6 @@ li:active {
     height: 100vh; /* Aspect ratio trick */
     padding-bottom: 206.25%; /* 16:9 aspect ratio (adjust if needed) */
     overflow: hidden;
-    
   }
 
   .player-container img {
@@ -112,6 +119,5 @@ li:active {
     border-radius: 10px;
   } */
 }
-
 
 /* 🎀 Pink Play Button */
