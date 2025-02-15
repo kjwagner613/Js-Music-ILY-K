@@ -1,5 +1,11 @@
-// List of songs
-const songs = [
+document.addEventListener("DOMContentLoaded", () => {
+  const playButton = document.querySelector(".play-button");
+  const pauseButton = document.querySelector(".pause-button");
+  const nextButton = document.querySelector(".next-button");
+  const audioPlayer = document.getElementById("audioPlayer");
+  const playlist = document.getElementById("playlist");
+
+  const songs = [
     {
       name: "The Craving",
       file: "https://dl.dropboxusercontent.com/scl/fi/u2io5qs34uydyev225wz0/01-The-Craving-Jenna-s-version.mp3?rlkey=kqqvt6b0usswdjfsucwy0aj39&st=xyp206t4&dl=0",
@@ -13,10 +19,9 @@ const songs = [
       file: "https://dl.dropboxusercontent.com/scl/fi/4p9hpo906qide0dro6r8x/03-Cold-Heart-PNAU-Remix.mp3?rlkey=hqnjviz5cq2hlkxmy1gzml67w&st=tlvwqce6&dl=0",
     },
   ];
-  
-  const audioPlayer = document.getElementById("audioPlayer");
-  const playlist = document.getElementById("playlist");
-  
+
+  let currentSongIndex = 0; // Initialize current song index
+
   // Load playlist dynamically
   songs.forEach((song, index) => {
     const li = document.createElement("li");
@@ -24,21 +29,44 @@ const songs = [
     li.addEventListener("click", () => playSong(index));
     playlist.appendChild(li);
   });
-  
-  // Play song from playlist
+
   function playSong(index) {
     audioPlayer.src = songs[index].file;
-    audioPlayer.play();
+    audioPlayer.play().catch((error) => {
+      console.error("Error playing song:", error); // Handle potential errors
+      // You might want to display an error message to the user here.
+    });
     currentSongIndex = index;
   }
-  
-  // Play next song when current song ends
-  let currentSongIndex = 0;
+
   audioPlayer.addEventListener("ended", () => {
+    playNextSong();
+  });
+
+  function playNextSong() {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     playSong(currentSongIndex);
-  });
-  
-  // Start with first song
+  }
+
+  // Event listeners for the buttons
+  if (playButton) {
+    playButton.addEventListener("click", () => {
+      audioPlayer.play();
+    });
+  }
+
+  if (pauseButton) {
+    pauseButton.addEventListener("click", () => {
+      audioPlayer.pause();
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      playNextSong();
+    });
+  }
+
+  // Start with the first song
   playSong(0);
-  
+});

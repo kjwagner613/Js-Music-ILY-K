@@ -4,10 +4,11 @@ body {
   text-align: center;
   background-color: #ffe4ec !important; /* Force light pink */
   margin: 0;
-  padding: 20px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
 
 /* 🎀 Player Box */
@@ -43,7 +44,7 @@ ul {
 
 li {
   background: #ff69b4; /* Hot pink */
-  color: white;
+  /* color: white; */
   padding: 15px;
   margin: 8px;
   border-radius: 10px;
@@ -64,16 +65,39 @@ li:active {
   body {
     padding: 10px;
   }
+  .play-button, .pause-button, .next-button, .mute-button, .volume-up-button, .volume-down-button, .song-title, remaining-time {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 5px; /* Adjust as desired */
+  }
 
   .player-container {
-    width: 95%;
-    padding: 15px;
+    position: abosolute; /* Essential for absolute positioning of children */
+    width: 90%; /* Or a specific pixel width if you prefer */
+    max-width: 480px; /* Optional: Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the container on the page */
+    height: 0; /* Aspect ratio trick */
+    padding-bottom: 206.25%; /* 16:9 aspect ratio (adjust if needed) */
+    overflow: hidden;
+    
   }
 
-  li {
+  .player-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* li {
     font-size: 16px;
     padding: 12px;
-  }
+  } */
 
   audio {
     height: 40px;
@@ -83,4 +107,11 @@ li:active {
     background-color: #ff69b4 !important;
     border: 2px solid #ff1493;
   }
+  /* #controlUnit.player-container img {
+    padding: 20px;
+    border-radius: 10px;
+  } */
 }
+
+
+/* 🎀 Pink Play Button */
