@@ -66,7 +66,7 @@ li:active {
 @media (max-width: 600px) {
   body {
     padding: 10px;
-    transform: scale(0.08);
+  
   }
   .play-button,
   .pause-button,
@@ -92,7 +92,7 @@ li:active {
     height: 90vh; /* Aspect ratio trick */
     /* padding-bottom: 05%;  */
     overflow: hidden;
-    transform: scale(0.08);
+ 
   }
 
   .player-container img {
@@ -102,7 +102,7 @@ li:active {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(0.08);
+
   }
 
   /* li {
@@ -117,7 +117,7 @@ li:active {
     appearance: none;
     background-color: #ff69b4 !important;
     border: 2px solid #ff1493;
-    transform: scale(08);
+    
   }
   /* #controlUnit.player-container img {
     padding: 20px;
