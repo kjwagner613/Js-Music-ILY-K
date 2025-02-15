@@ -79,7 +79,7 @@ li:active {
     width: 90%; /* Or a specific pixel width if you prefer */
     max-width: 480px; /* Optional: Set a maximum width for larger screens */
     margin: 0 auto; /* Center the container on the page */
-    height: 0; /* Aspect ratio trick */
+    height: 100vh; /* Aspect ratio trick */
     padding-bottom: 206.25%; /* 16:9 aspect ratio (adjust if needed) */
     overflow: hidden;
     
