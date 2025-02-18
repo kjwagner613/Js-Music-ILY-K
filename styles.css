@@ -127,7 +127,7 @@ li:active {
   margin: 5px;
 }
 
-/* Position the play button 0.25vh from the bottom and center it horizontally */
+/* Position the play button 72vh from the bottom and center it horizontally */
 .play-button {
   position: absolute;
   bottom: 72vh;
@@ -149,6 +149,17 @@ li:active {
   bottom: 72vh;
   left: calc(50% + 60px); /* Adjust the value as needed */
   transform: translateX(-50%);
+}
+
+/* Styles for the status display */
+.status-display {
+  position: absolute;
+  bottom: calc(72vh + 50px); /* 10px above the play button */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: #f1f0f0; /* Light color */
+  text-align: center;
 }
 
 /* ... other styles ... */
@@ -188,14 +199,4 @@ li:active {
 .song-list-button:active {
   background-color: #ff1493; /* Deep pink */
   transform: scale(1.05); /* Tiny pop effect */
-}
-/* Styles for the status display */
-.status-display {
-  position: absolute;
-  bottom: calc(72vh + 50px); /* 10px above the play button */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 22px;
-  color: #f1f0f0; /* Hot pink */
-  text-align: center;
 }

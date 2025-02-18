@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function playNextSong() {
+    console.log("Playing next song");
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     playSong(currentSongIndex);
   }
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (nextButton) {
     nextButton.addEventListener("click", () => {
+      console.log("Next button clicked");
       playNextSong();
     });
   }

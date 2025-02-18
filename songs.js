@@ -20,7 +20,7 @@ const songs = [
     file: "https://dl.dropboxusercontent.com/scl/fi/qd9fefsq6txiwnkw97gzw/I-Am-The-Highway.mp3?rlkey=y4kh6hssi7xnpk414i80ero9d&st=uuw8nthw&dl=0",
   },
   {
-    name: "I Get High",
+    name: "We saw gold",
     file: "https://dl.dropboxusercontent.com/scl/fi/m0nsuopkro244w30on1ej/I-Get-High.mp3?rlkey=giuzvlv8i1euu2qb3iix5xe6p&st=wbe5y86r&dl=0",
   },
   {

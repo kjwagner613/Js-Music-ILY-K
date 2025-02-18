@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>♥jS♥ music ♥Sj♥</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  </head>
+  <body>
     <div class="player-container">
-        <img src="assets/layeredSjPlayer.png" alt="Audio Player Interface">
-        <audio id="audioPlayer" controls></audio>
-        <div class="controls">
-            <button class="play-button">Play</button>
-            <button class="pause-button">Pause</button>
-            <button class="next-button">Next</button>
-        </div>
-        <div class="display-area">
+      <img src="assets/layeredSjPlayer.png" alt="Audio Player Interface" />
+      <audio id="audioPlayer" controls></audio>
+      <div class="controls">
+        <button class="play-button">Play</button>
+        <button class="pause-button">Pause</button>
+        <button class="next-button">Next</button>
+      </div>
+      <!-- <div class="display-area">
             <div class="progress-bar"></div>
             <div class="song-title">Song Title</div>
             <div class="remaining-time">0:00</div>
-        </div>
-        <div class="status-display">
-           <p> <span id="status">Paused</span> </p> <span id="current-song">No song playing</span>
-        </div>
-        <button class="song-list-button" onclick="window.location.href='songlist.html'">Song List</button>
-        <ul id="playlist"></ul>
+        </div> -->
+      <div class="status-display">
+        <span id="status">Paused</span><br />
+        <span id="current-song">No song playing</span>
+      </div>
+      <button
+        class="song-list-button"
+        onclick="window.location.href='songlist.html'"
+      >
+        Song List
+      </button>
+      <ul id="playlist"></ul>
     </div>
 
     <script src="songs.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
