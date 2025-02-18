@@ -189,3 +189,13 @@ li:active {
   background-color: #ff1493; /* Deep pink */
   transform: scale(1.05); /* Tiny pop effect */
 }
+/* Styles for the status display */
+.status-display {
+  position: absolute;
+  bottom: calc(72vh + 50px); /* 10px above the play button */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: #f1f0f0; /* Hot pink */
+  text-align: center;
+}

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.querySelector(".next-button");
   const audioPlayer = document.getElementById("audioPlayer");
   const playlist = document.getElementById("playlist");
+  const statusDisplay = document.getElementById("status");
+  const currentSongDisplay = document.getElementById("current-song");
 
   let currentSongIndex = 0;
 
@@ -21,6 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error playing song:", error);
     });
     currentSongIndex = index;
+    updateStatus("Playing", songs[index].name);
+  }
+
+  function updateStatus(status, songName) {
+    statusDisplay.textContent = status;
+    currentSongDisplay.textContent = songName;
   }
 
   audioPlayer.addEventListener("ended", () => {
@@ -35,12 +43,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (playButton) {
     playButton.addEventListener("click", () => {
       audioPlayer.play();
+      updateStatus("Playing", songs[currentSongIndex].name);
     });
   }
 
   if (pauseButton) {
     pauseButton.addEventListener("click", () => {
       audioPlayer.pause();
+      updateStatus("Paused", songs[currentSongIndex].name);
     });
   }
 
