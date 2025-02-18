@@ -6,15 +6,19 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  margin-top: 20px;
   width: 100vw;
 }
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 /* 🎀 Player Box */
 .player-container {
-  background: #ffb6c1 !important; /* Force pink */
+  display: grid;
+  grid-template-rows: auto auto auto auto, auto, auto, auto, auto, auto;
+  grid-template-columns: auto auto auto auto;
+  outline: 2px solid #000; /* Adjust thickness and color as needed */
+  outline-offset: -2px; 
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -65,8 +69,7 @@ li:active {
 /* 📱 iPhone & Mobile Fixes */
 @media (max-width: 600px) {
   body {
-    padding: 10px;
-  
+    padding: 2px;
   }
   .play-button,
   .pause-button,
@@ -92,7 +95,6 @@ li:active {
     height: 90vh; /* Aspect ratio trick */
     /* padding-bottom: 05%;  */
     overflow: hidden;
- 
   }
 
   .player-container img {
@@ -102,7 +104,6 @@ li:active {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
   }
 
   /* li {
@@ -117,7 +118,6 @@ li:active {
     appearance: none;
     background-color: #ff69b4 !important;
     border: 2px solid #ff1493;
-    
   }
   /* #controlUnit.player-container img {
     padding: 20px;
@@ -126,3 +126,32 @@ li:active {
 }
 
 /* 🎀 Pink Play Button */
+
+/* Styles for the buttons */
+.play-button, .pause-button, .next-button {
+  position: absolute; /* or relative, if inside a positioned container */
+  cursor: pointer;
+}
+/* Example button positioning (REPLACE WITH YOUR VALUES FROM DEVTOOLS) */
+/* .play-button { */
+  /* top: 66%; Example - REPLACE with your actual value from DevTools
+  left: 21%; Example - REPLACE with your actual value from DevTools */
+  /* ... other styles ... */
+/* } */
+/* ... (styles for other buttons - similar structure) ... */
+
+.display-area {
+  position: absolute;
+  top: 10%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(0%);
+  width: 80%; /* Adjust width as needed */
+  color: white;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 0%; /* Initial width */
+  height: 200px;
+  background-color: red;
+}
