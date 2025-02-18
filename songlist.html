@@ -1,24 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const playButton = document.querySelector(".play-button");
-  const pauseButton = document.querySelector(".pause-button");
-  const nextButton = document.querySelector(".next-button");
-  const audioPlayer = document.getElementById("audioPlayer");
-  const playlist = document.getElementById("playlist");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="song-list-container">
+        <h1>Song List</h1>
+        <ul id="song-list">
+            <!-- Song items will be dynamically added here -->
+        </ul>
+    </div>
 
-  const songs = [
-    {
-      name: "The Craving",
-      file: "https://dl.dropboxusercontent.com/scl/fi/u2io5qs34uydyev225wz0/01-The-Craving-Jenna-s-version.mp3?rlkey=kqqvt6b0usswdjfsucwy0aj39&st=xyp206t4&dl=0",
-    },
-    {
-      name: "Volcano",
-      file: "https://dl.dropboxusercontent.com/scl/fi/8859rfgqzp1m5gjx3g81i/02-Volcano.mp3?rlkey=aibl7xc3hxurvq4luhc1ciftt&st=y3l49ud6&dl=0",
-    },
-    {
-      name: "PNAU Mix",
-      file: "https://dl.dropboxusercontent.com/scl/fi/4p9hpo906qide0dro6r8x/03-Cold-Heart-PNAU-Remix.mp3?rlkey=hqnjviz5cq2hlkxmy1gzml67w&st=tlvwqce6&dl=0",
-    },
-    {
+    <script>
+        const songs = [
+            { name: "The Craving", file: "https://dl.dropboxusercontent.com/scl/fi/u2io5qs34uydyev225wz0/01-The-Craving-Jenna-s-version.mp3?rlkey=kqqvt6b0usswdjfsucwy0aj39&st=xyp206t4&dl=0" },
+            { name: "Volcano", file: "https://dl.dropboxusercontent.com/scl/fi/8859rfgqzp1m5gjx3g81i/02-Volcano.mp3?rlkey=aibl7xc3hxurvq4luhc1ciftt&st=y3l49ud6&dl=0" },
+            { name: "PNAU Mix", file: "https://dl.dropboxusercontent.com/scl/fi/4p9hpo906qide0dro6r8x/03-Cold-Heart-PNAU-Remix.mp3?rlkey=hqnjviz5cq2hlkxmy1gzml67w&st=tlvwqce6&dl=0" },
+            {
       name: "Death Wish Love",
       file: "https://dl.dropboxusercontent.com/scl/fi/sqt4ep4drkmb2p6n427ri/Death-Wish-Love.mp3?rlkey=y350qtwje8y4mrpublj3upl97&st=049g959w&dl=0",
     },
@@ -78,59 +79,19 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Natasha Bedingfield",
       file: "https://dl.dropboxusercontent.com/scl/fi/z0qjlydj4x2t3c5qaggxe/Unwritten.mp3?rlkey=0j5dpxnkq0ra0kgpgeiomyewf&st=t1tg6lft&dl=0",
     },
-  ];
+        ];
 
-  let currentSongIndex = 0;
+        const songList = document.getElementById('song-list');
 
-  // Load playlist dynamically
-  songs.forEach((song, index) => {
-    const li = document.createElement("li");
-    li.textContent = song.name;
-    li.addEventListener("click", () => playSong(index));
-    playlist.appendChild(li);
-  });
-
-  function playSong(index) {
-    audioPlayer.src = songs[index].file;
-    audioPlayer.play().catch(error => {
-      console.error("Error playing song:", error);
-    });
-    currentSongIndex = index;
-  }
-
-  audioPlayer.addEventListener("ended", () => {
-    playNextSong();
-  });
-
-  function playNextSong() {
-    currentSongIndex = (currentSongIndex + 1) % songs.length;
-    playSong(currentSongIndex);
-  }
-
-  if (playButton) {
-    playButton.addEventListener('click', () => {
-      audioPlayer.play();
-    });
-  }
-
-  if (pauseButton) {
-    pauseButton.addEventListener('click', () => {
-      audioPlayer.pause();
-    });
-  }
-
-  if (nextButton) {
-    nextButton.addEventListener('click', () => {
-      playNextSong();
-    });
-  }
-
-  // Check if a song was selected from the song list page
-  const selectedSongIndex = localStorage.getItem('selectedSongIndex');
-  if (selectedSongIndex !== null) {
-    playSong(parseInt(selectedSongIndex));
-    localStorage.removeItem('selectedSongIndex');
-  } else {
-    playSong(0); // Start with the first song
-  }
-});
+        songs.forEach((song, index) => {
+            const li = document.createElement('li');
+            li.textContent = song.name;
+            li.addEventListener('click', () => {
+                localStorage.setItem('selectedSongIndex', index);
+                window.location.href = 'index.html';
+            });
+            songList.appendChild(li);
+        });
+    </script>
+</body>
+</html>

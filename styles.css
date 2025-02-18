@@ -6,18 +6,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
   margin-top: 20px;
   width: 100vw;
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
 /* 🎀 Player Box */
 .player-container {
   display: grid;
-  grid-template-rows: auto auto auto auto, auto, auto, auto, auto, auto;
-  grid-template-columns: auto auto auto auto;
-  outline: 2px solid #000; /* Adjust thickness and color as needed */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(4, 1fr);
+  outline: 2px solid #150d0d; /* Adjust thickness and color as needed */
   outline-offset: -2px; 
   padding: 20px;
   border-radius: 15px;
@@ -50,7 +48,6 @@ ul {
 
 li {
   background: #ff69b4; /* Hot pink */
-  /* color: white; */
   padding: 15px;
   margin: 8px;
   border-radius: 10px;
@@ -71,6 +68,7 @@ li:active {
   body {
     padding: 2px;
   }
+
   .play-button,
   .pause-button,
   .next-button,
@@ -78,7 +76,7 @@ li:active {
   .volume-up-button,
   .volume-down-button,
   .song-title,
-  remaining-time {
+  .remaining-time {
     position: absolute;
     background-color: transparent;
     border: none;
@@ -88,12 +86,10 @@ li:active {
   }
 
   .player-container {
-    /* position: abosolute; */
     width: 90%; /* Or a specific pixel width if you prefer */
     max-width: 480px; /* Optional: Set a maximum width for larger screens */
     margin: 20 auto; /* Center the container on the page */
     height: 90vh; /* Aspect ratio trick */
-    /* padding-bottom: 05%;  */
     overflow: hidden;
   }
 
@@ -106,11 +102,6 @@ li:active {
     object-fit: cover;
   }
 
-  /* li {
-    font-size: 16px;
-    padding: 12px;
-  } */
-
   audio {
     height: 40px;
     border-radius: 8px;
@@ -119,26 +110,46 @@ li:active {
     background-color: #ff69b4 !important;
     border: 2px solid #ff1493;
   }
-  /* #controlUnit.player-container img {
-    padding: 20px;
-    border-radius: 10px;
-  } */
 }
 
 /* 🎀 Pink Play Button */
 
 /* Styles for the buttons */
 .play-button, .pause-button, .next-button {
-  position: absolute; /* or relative, if inside a positioned container */
+  position: relative; /* or relative, if inside a positioned container */
   cursor: pointer;
+  background-color: #ff69b4; /* Hot pink */
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 5px;
 }
-/* Example button positioning (REPLACE WITH YOUR VALUES FROM DEVTOOLS) */
-/* .play-button { */
-  /* top: 66%; Example - REPLACE with your actual value from DevTools
-  left: 21%; Example - REPLACE with your actual value from DevTools */
-  /* ... other styles ... */
-/* } */
-/* ... (styles for other buttons - similar structure) ... */
+
+/* Position the play button 0.25vh from the bottom and center it horizontally */
+.play-button {
+  position: absolute;
+  bottom: 72vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Position the pause button to the left of the play button */
+.pause-button {
+  position: absolute;
+  bottom: 72vh;
+  left: calc(50% - 60px); /* Adjust the value as needed */
+  transform: translateX(-50%);
+}
+
+/* Position the next button to the right of the play button */
+.next-button {
+  position: absolute;
+  bottom: 72vh;
+  left: calc(50% + 60px); /* Adjust the value as needed */
+  transform: translateX(-50%);
+}
+
+/* ... other styles ... */
 
 .display-area {
   position: absolute;
@@ -154,4 +165,26 @@ li:active {
   width: 0%; /* Initial width */
   height: 200px;
   background-color: red;
+}
+
+
+.song-list-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff69b4; /* Hot pink */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.song-list-button:hover,
+.song-list-button:active {
+  background-color: #ff1493; /* Deep pink */
+  transform: scale(1.05); /* Tiny pop effect */
 }
