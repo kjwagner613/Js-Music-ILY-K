@@ -13,10 +13,10 @@ body {
 /* 🎀 Player Box */
 .player-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   outline: 2px solid #150d0d; /* Adjust thickness and color as needed */
-  outline-offset: -2px; 
+  outline-offset: -2px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -115,7 +115,9 @@ li:active {
 /* 🎀 Pink Play Button */
 
 /* Styles for the buttons */
-.play-button, .pause-button, .next-button {
+.play-button,
+.pause-button,
+.next-button {
   position: relative; /* or relative, if inside a positioned container */
   cursor: pointer;
   background-color: #ff69b4; /* Hot pink */
@@ -166,7 +168,6 @@ li:active {
   height: 200px;
   background-color: red;
 }
-
 
 .song-list-button {
   position: absolute;
