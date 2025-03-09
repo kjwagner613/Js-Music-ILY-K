@@ -210,6 +210,7 @@ li:active {
     max-width: 430px;
     height: 80vh; /* Adjust height as needed */
     margin: 0 auto;
+    overflow: hidden;
   }
 /* 
   .play-button,
