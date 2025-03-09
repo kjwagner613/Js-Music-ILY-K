@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const playButton = document.querySelector(".play-button");
-  const pauseButton = document.querySelector(".pause-button");
-  const nextButton = document.querySelector(".next-button");
   const audioPlayer = document.getElementById("audioPlayer");
   const playlist = document.getElementById("playlist");
   const statusDisplay = document.getElementById("status");
   const currentSongDisplay = document.getElementById("current-song");
+  const playerContainer = document.querySelector('.player-container');
 
   let currentSongIndex = 0;
 
@@ -16,6 +14,36 @@ document.addEventListener("DOMContentLoaded", () => {
     li.addEventListener("click", () => playSong(index));
     playlist.appendChild(li);
   });
+
+  playerContainer.addEventListener("click", (event) => {
+    const rect = playerContainer.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const prevButton = { x: 109, y: 466, width: 217 - 109, height: 568 - 466 };
+    const playButton = { x: 260, y: 469, width: 377 - 260, height: 571 - 469 };
+    const pauseButton = { x: 419, y: 464, width: 526 - 419, height: 564 - 464 };
+    const nextButton = { x: 576, y: 467, width: 683 - 576, height: 574 - 467 };
+
+    if (isButtonClicked(x, y, playButton)) {
+      audioPlayer.play();
+    } else if (isButtonClicked(x, y, pauseButton)) {
+      audioPlayer.pause();
+    } else if (isButtonClicked(x, y, nextButton)) {
+      playNextSong();
+    } else if (isButtonClicked(x, y, prevButton)) {
+      playPrevSong();
+    }
+  });
+
+  function isButtonClicked(x, y, button) {
+    return (
+      x >= button.x &&
+      x <= button.x + button.width &&
+      y >= button.y &&
+      y <= button.y + button.height
+    );
+  }
 
   function playSong(index) {
     audioPlayer.src = songs[index].file;
@@ -28,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateStatus(status, songName) {
     statusDisplay.textContent = status;
-    currentSongDisplay.textContent = songName;
+    const currentSong = songs[currentSongIndex];
+    currentSongDisplay.textContent = `${currentSong.name}\n${currentSong.artist}`;
   }
 
   audioPlayer.addEventListener("ended", () => {
@@ -39,27 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Playing next song");
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     playSong(currentSongIndex);
-  }
-
-  if (playButton) {
-    playButton.addEventListener("click", () => {
-      audioPlayer.play();
-      updateStatus("Playing", songs[currentSongIndex].name);
-    });
-  }
-
-  if (pauseButton) {
-    pauseButton.addEventListener("click", () => {
-      audioPlayer.pause();
-      updateStatus("Paused", songs[currentSongIndex].name);
-    });
-  }
-
-  if (nextButton) {
-    nextButton.addEventListener("click", () => {
-      console.log("Next button clicked");
-      playNextSong();
-    });
   }
 
   // Check if a song was selected from the song list page

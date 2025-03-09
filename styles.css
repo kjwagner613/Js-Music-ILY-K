@@ -3,25 +3,69 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #ffe4ec !important; /* Force light pink */
-  margin: 0;
   padding: 0;
   display: flex;
-  margin-top: 20px;
+  margin: 0;
   width: 100vw;
 }
+.container {
+  position: relative;
+  width: 300px; /* Adjust to your graphic width */
+  height: 200px; /* Adjust to your graphic height */
+}
+
+.graphic {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20px; /* Adjust Y coordinate */
+  left: 50px; /* Adjust X coordinate */
+  background-color: rgba(255, 255, 255, 0.7); /* Optional background */
+  padding: 5px;
+}
+
+/* .controls {
+  position: absolute;
+  top:  345px; /* Adjust Y coordinate */
+  /* left: 168px; Adjust X coordinate */
+  /* display: flex; */
+
+} 
+/* .pause-button { */
+  /* left: calc(100% - 0px); Adjust the value as needed */
+}
+
+/* .next-button { */
+  /* left: calc(75% + 30px); Adjust the value as needed */
+/* } */
+/* 
+.play-button, 
+.pause-button,
+.next-button { */
+  /* background-color: red; /* Style your buttons */
+  /* color: white; */
+  /* padding: 10px; */
+  /* border: none; */
+  /* cursor: pointer; */
+/* }  */
 
 /* 🎀 Player Box */
 .player-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  outline: 2px solid #150d0d; /* Adjust thickness and color as needed */
+  /*display: grid;
+  grid-template-columns: repeat(12, 1fr); /* Adjust based on your graphic 
+  grid-template-rows: repeat(12, 1fr); Adjust based on your graphic */
+  outline: 2px solid #150d0d;
   outline-offset: -2px;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 400px;
+  height: 90%;
+  padding-top: 100px;
   transition: all 0.3s;
   transform: scale(0.9);
 }
@@ -56,12 +100,12 @@ li {
   text-align: center;
   transition: all 0.3s;
 }
-
+/* 
 li:hover,
 li:active {
   background: #ff1493; /* Deep pink */
-  transform: scale(1.05); /* Tiny pop effect */
-}
+  /* transform: scale(1.05); Tiny pop effect */
+/* } */
 
 /* 📱 iPhone & Mobile Fixes */
 @media (max-width: 600px) {
@@ -69,7 +113,7 @@ li:active {
     padding: 2px;
   }
 
-  .play-button,
+  /* .play-button,
   .pause-button,
   .next-button,
   .mute-button,
@@ -83,15 +127,9 @@ li:active {
     cursor: pointer;
     padding: 0;
     border-radius: 5px; /* Adjust as desired */
-  }
+  /* } */ */
 
-  .player-container {
-    width: 90%; /* Or a specific pixel width if you prefer */
-    max-width: 480px; /* Optional: Set a maximum width for larger screens */
-    margin: 20 auto; /* Center the container on the page */
-    height: 90vh; /* Aspect ratio trick */
-    overflow: hidden;
-  }
+
 
   .player-container img {
     position: absolute;
@@ -114,52 +152,16 @@ li:active {
 
 /* 🎀 Pink Play Button */
 
-/* Styles for the buttons */
-.play-button,
-.pause-button,
-.next-button {
-  position: relative; /* or relative, if inside a positioned container */
-  cursor: pointer;
-  background-color: #ff69b4; /* Hot pink */
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  margin: 5px;
-}
-
-/* Position the play button 72vh from the bottom and center it horizontally */
-.play-button {
-  position: absolute;
-  bottom: 72vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Position the pause button to the left of the play button */
-.pause-button {
-  position: absolute;
-  bottom: 72vh;
-  left: calc(50% - 60px); /* Adjust the value as needed */
-  transform: translateX(-50%);
-}
-
-/* Position the next button to the right of the play button */
-.next-button {
-  position: absolute;
-  bottom: 72vh;
-  left: calc(50% + 60px); /* Adjust the value as needed */
-  transform: translateX(-50%);
-}
-
 /* Styles for the status display */
 .status-display {
-  position: absolute;
-  bottom: calc(72vh + 50px); /* 10px above the play button */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 22px;
-  color: #f1f0f0; /* Light color */
-  text-align: center;
+  position: absolute; /* Add this line */
+  top: 14vh; /* 1.4 down from the top (adjust as needed) */
+  left: 65%; /* 0.33 from the left border (adjust as needed) */
+  transform: translateX(0%); /* Remove the translateX(-50%) */
+  font-size: 3.5vh; 
+  color: #f1f0f0;
+  text-align: left; /* Left-justify the text */
+  white-space: pre-line; /* Allows line breaks (\n) to be rendered */
 }
 
 /* ... other styles ... */
@@ -182,8 +184,8 @@ li:active {
 
 .song-list-button {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 85%;
+  left: 92%;
   transform: translate(-50%, -50%);
   background-color: #ff69b4; /* Hot pink */
   color: white;
@@ -191,7 +193,7 @@ li:active {
   padding: 15px 30px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 3.5vh;
   transition: all 0.3s;
 }
 
@@ -199,4 +201,25 @@ li:active {
 .song-list-button:active {
   background-color: #ff1493; /* Deep pink */
   transform: scale(1.05); /* Tiny pop effect */
+}
+
+/* 📱 iPhone 13 Pro Max Specific Fixes */
+@media (min-width: 430px) and (max-width: 932px) {
+  .player-container {
+    width: 100%;
+    max-width: 430px;
+    height: 80vh; /* Adjust height as needed */
+    margin: 0 auto;
+  }
+/* 
+  .play-button,
+  .pause-button,
+  .next-button {
+    bottom: 10vh; /* Adjust the value as needed */
+  /* } */ */
+
+  .status-display {
+    bottom: calc(10vh + 50px); /* 10px above the play button */
+    top: 10vh; /* Adjust as needed */
+  }
 }
