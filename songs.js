@@ -26,7 +26,7 @@ const songs = [
   },
   {
     name: "We saw gold",
-    artist: "Boone",
+    artist: "Tones & I",
     file: "https://dl.dropboxusercontent.com/scl/fi/m0nsuopkro244w30on1ej/I-Get-High.mp3?rlkey=giuzvlv8i1euu2qb3iix5xe6p&st=wbe5y86r&dl=0",
   },
   {
@@ -41,12 +41,12 @@ const songs = [
   },
   {
     name: "Too Close",
-    artist: "Artist",
+    artist: "Damien Rice",
     file: "https://dl.dropboxusercontent.com/scl/fi/agebvadhjk35vkf6kk0m7/Too-Close.mp3?rlkey=7j1d8jug58ak57js5ikn1k11s&st=3mrugfu8&dl=0",
   },
   {
     name: "Wilder Mind",
-    artist: "Artist",
+    artist: "Mumfors & Sons",
     file: "https://dl.dropboxusercontent.com/scl/fi/k267tm5yrh0vigh8yg36q/Wilder-Mind.mp3?rlkey=rxvsk0ryu8l3a1vyekjiilo8z&st=hz0s1pzx&dl=0",
   },
   {
@@ -56,27 +56,27 @@ const songs = [
   },
   {
     name: "Angel By The Wings",
-    artist: "Artist",
+    artist: "Sia",
     file: "https://dl.dropboxusercontent.com/scl/fi/o54urjpf9rfds2rjdkg22/Angel-By-The-Wings.mp3?rlkey=mup2w5wpdcp7hfx3570ec9i3f&st=wos2bjib&dl=0",
   },
   {
     name: "Anybody Listening",
-    artist: "Artist",
+    artist: "Scorpions",
     file: "https://dl.dropboxusercontent.com/scl/fi/td17kqv7x6zhdn5pg6lq7/Anybody-Listening_.mp3?rlkey=c1di04qsfyb9tauowpza7i2xu&st=xwqrdgrs&dl=0",
   },
   {
     name: "Bad Child",
-    artist: "Artist",
+    artist: "Tones &",
     file: "https://dl.dropboxusercontent.com/scl/fi/57gty80uysuziwjq1wtg3/Bad-Child.mp3?rlkey=89l1r02m3q04eq5282fgenr6z&st=p4lngp62&dl=0",
   },
   {
     name: "Beautiful Things",
-    artist: "Artist",
+    artist: "Boone",
     file: "https://dl.dropboxusercontent.com/scl/fi/h3jq6f1yk5tdo5jxy6go5/Beautiful-Things.mp3?rlkey=avgln5y50ykm2m39azbvxdord&st=t0b5p0cz&dl=0",
   },
   {
-    name: "Natasha Bedingfield",
-    artist: "Artist",
+    name: "Your Song, you knmow...",
+    artist: "ArNatasha Bedingfieldtist",
     file: "https://dl.dropboxusercontent.com/scl/fi/z0qjlydj4x2t3c5qaggxe/Unwritten.mp3?rlkey=0j5dpxnkq0ra0kgpgeiomyewf&st=t1tg6lft&dl=0",
   },
 ];
