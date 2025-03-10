@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffe4ec;
   padding: 0;
-  margin: 3px;
+  margin: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -19,37 +19,32 @@ body {
   width: 100%;
   max-width: 800px;
   height: 500px;
-  padding: 15px;
   overflow: hidden;
+  background-image: url('/mnt/data/layeredSjPlayer.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* 🎶 Status Display */
+/* 🎶 Status Display inside LCD */
 .status-display {
   position: absolute;
-  top: 20vh;
-  left: 12vw;
+  top: 23.5vh;
+  left: 17vw;
   text-align: left;
-  font-size: 1.7vh;
+  font-size: 1.8vh;
   font-family: Digital-7;
-  color: #c0c0c0;
-  width: 300px;
+  color: #000;
+  width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* 🔘 Audio Player */
-audio {
-  width: 100%;
-  border-radius: 10px;
-  background-color: #ff69b4;
-  border: 2px solid #ff1493;
-}
-
 /* 🎵 Song List Button */
 .song-list-button {
   position: absolute;
-  top: 30vh;
+  top: 34.5vh;
   left: 50%;
   transform: translateX(-50%);
   background-color: #ff69b4;
@@ -62,49 +57,9 @@ audio {
   transition: all 0.3s;
 }
 
-/* 📜 Hide Song List Under Player */
-#playlist {
-  display: none;
-}
-
-/* 📜 Song List Page */
-#song-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  max-width: 100%;
-}
-
-#song-list li {
-  background: #ff69b4;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#song-list li:hover {
-  background-color: #ff1493;
-}
-
-/* ✅ Automatic Column Creation */
-.song-list-container ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-}
-
-.song-list-container li {
-  background-color: #ff69b4;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 14px;
+/* 🛡️ Prevent Scroll */
+html, body {
+  overflow: hidden;
 }
 
 /* 📱 iPhone 13 Pro Max Fixes */
@@ -115,17 +70,22 @@ audio {
   }
 
   .status-display {
-    top: 15vh;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: left;
+    top: 23.5vh;
+    left: 17vw;
+    width: 250px;
   }
 
   .song-list-button {
-    top: 25vh;
-  }
-
-  body {
-    overflow: hidden;
+    top: 34.5vh;
   }
 }
+
+/* 🚫 Hide Playlist */
+#playlist {
+  display: none;
+} 
+
+/* 💿 Ensure No Scrolling */
+html, body {
+  overscroll-behavior: none;
+} 
