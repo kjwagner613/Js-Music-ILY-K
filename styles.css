@@ -4,9 +4,10 @@ body {
   text-align: center;
   background-color: #ffe4ec !important; /* Force light pink */
   padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
+  margin: 3px;
+  height: auto;
+  width: 100%;
+  max-width: 100vw;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -53,13 +54,30 @@ li {
   transition: all 0.3s;
 }
 
+
+/* 📱 iPhone & Mobile Fixes */
+@media (max-width: 600px) {
+  body {
+    padding: 2px;
+  }
+
+  audio {
+    height: 40px;
+    border-radius: 8px;
+    -webkit-appearance: none !important; /* Force pink on iPhones */
+    appearance: none;
+    background-color: #ff69b4 !important;
+    border: 2px solid #ff1493;
+  }
+}
+
 .status-display {
   position: absolute; /* Ensures these elements stay in place */
   top: 6vh;
   left: 12vw;
   font-size: 1.7vh;
   font-family: Digital-7;
-  color: #C0C0C0.;
+  color: #C0C0C0;
   text-align: left;
   white-space: pre-line;
 }
