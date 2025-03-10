@@ -65,28 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function playNextSong() {
+    console.log("Playing next song");
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     playSong(currentSongIndex);
-  }
-
-  if (playButton) {
-    playButton.addEventListener("click", () => {
-      audioPlayer.play();
-      updateStatus("Playing", songs[currentSongIndex].name);
-    });
-  }
-
-  if (pauseButton) {
-    pauseButton.addEventListener("click", () => {
-      audioPlayer.pause();
-      updateStatus("Paused", songs[currentSongIndex].name);
-    });
-  }
-
-  if (nextButton) {
-    nextButton.addEventListener("click", () => {
-      playNextSong();
-    });
   }
 
   // Check if a song was selected from the song list page
