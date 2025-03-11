@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #ffe4ec;
@@ -7,22 +6,19 @@ body {
   height: 100vh;
   width: 100vw;
   min-width: 100%;
- 
+
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .player-container {
   border-radius: 15px;
   width: 100vw;
   max-width: 800px;
   height: 100vh;
-
 }
-
 
 .status-display {
   position: absolute;
@@ -38,13 +34,16 @@ body {
   text-overflow: ellipsis;
 }
 
-
 .song-list-button {
   position: absolute;
   top: calc(12% + 9vh);
   left: 42.7%;
   width: 310px;
-  background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(255, 105, 180, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 105, 180, 0.8),
+    rgba(255, 105, 180, 0.2)
+  );
   color: white;
   white-space: nowrap;
   padding: 4px 90px;
@@ -71,13 +70,11 @@ audio {
   border: 2px solid #ff1493;
 }
 
-
 #playlist {
   display: none;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-
 
 .fancy-script {
   position: absolute;
@@ -87,10 +84,9 @@ audio {
   transform: translateX(-50%);
   font-family: "Great Vibes", cursive;
   font-size: 7vh;
-  color: #dfe7ef;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
-
 
 @media (max-width: 1000px) {
   .player-container {
@@ -103,7 +99,7 @@ audio {
     top: 10%;
     left: 50%;
   }
-  
+
   audio {
     position: absolute;
     top: calc(40% + 3vh);
@@ -119,13 +115,17 @@ audio {
     background-color: #ff69b4 !important;
     border: 2px solid #ff1493;
   }
-  
+
   .song-list-button {
     position: absolute;
     top: calc(11% + 11vh);
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(255, 105, 180, 0.2));
+    background: linear-gradient(
+      135deg,
+      rgba(255, 105, 180, 0.8),
+      rgba(255, 105, 180, 0.2)
+    );
     color: white;
     padding: 4px 90px;
     border-radius: 15px;
@@ -143,16 +143,6 @@ audio {
     font-family: "Great Vibes", cursive;
     font-size: 7vh;
     color: #dfe7ef;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
   }
 }
-
-
- 
-
-
-
-
-
-
-
