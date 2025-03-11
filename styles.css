@@ -12,7 +12,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 /* 🎀 Player Box - Locks Full Image */
@@ -47,7 +46,7 @@ body {
 /* 🎵 Song List Button */
 .song-list-button {
   position: absolute;
-  top: calc(10% + 12vh); 
+  top: calc(8% + 8vh);
   left: 50%;
   transform: translateX(-50%);
   background-color: #ff69b4;
@@ -88,12 +87,11 @@ audio {
     background-size: 100% auto;
   }
 
-
   .song-list-button {
     top: 60%;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 .fancy-script {
   position: absolute;
@@ -101,11 +99,11 @@ audio {
   left: 50%;
   white-space: nowrap;
   transform: translateX(-50%);
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
   font-size: 7vh;
   color: #dfe7ef;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
+}
 
 /* 🚀 Disable Zoom / Shrink */
 /* meta[name="viewport"] {
@@ -114,5 +112,5 @@ audio {
 
 /* ✅ Absolute Hard Lock */
 /* * { */
-  /* touch-action: none; */
+/* touch-action: none; */
 /* } */
