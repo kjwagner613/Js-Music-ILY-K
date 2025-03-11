@@ -35,7 +35,6 @@ body {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  text-align: left;
   font-size: 1.8vh;
   font-family: Digital-7;
   color: #000;
@@ -89,11 +88,6 @@ audio {
     background-size: 100% auto;
   }
 
-  .status-display {
-    top: 21.2%;
-    left: 14.5%;
-    width: 240px;
-  }
 
   .song-list-button {
     top: 60%;
