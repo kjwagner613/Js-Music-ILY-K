@@ -1,4 +1,4 @@
-/* 🌸 Pink Theme Fix for iPhones */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #ffe4ec;
@@ -7,28 +7,23 @@ body {
   height: 100vh;
   width: 100vw;
   min-width: 100%;
-  /* min-height: 1000px; */
+ 
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* 🎀 Player Box - Locks Full Image */
+
 .player-container {
   border-radius: 15px;
   width: 100vw;
   max-width: 800px;
   height: 100vh;
-  background-image: url("assets/layeredSjPlayer.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center top;
-  position: relative;
-  border: 5px solid white;
+
 }
 
-/* 🎶 Status Display inside LCD */
+
 .status-display {
   position: absolute;
   top: 10%;
@@ -38,64 +33,55 @@ body {
   font-family: Digital-7;
   color: #000;
   width: 240px;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* 🎵 Song List Button */
+
 .song-list-button {
   position: absolute;
-  top: calc(8% + 8vh);
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ff69b4;
+  top: calc(12% + 9vh);
+  left: 42.7%;
+  width: 310px;
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(255, 105, 180, 0.2));
   color: white;
-  border: 5px solid white;
+  white-space: nowrap;
   padding: 4px 90px;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 2vh;
   transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
 }
 
 audio {
   position: absolute;
-  top: calc(40% + 3vh); /* Adjust this value as needed */
+  top: calc(40% + 3vh);
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
+  max-width: 700px;
   border-radius: 10px;
   background: white;
   padding: 5px;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #ff69b4 !important; /* Hot pink */
+  background-color: #ff69b4 !important;
   border: 2px solid #ff1493;
 }
 
-/* 💀 Completely Hide Playlist */
+
 #playlist {
   display: none;
 }
 
-/* 📱 iPhone 13 Pro Max Exact Fit */
-@media (max-width: 1284px) and (max-height: 2778px) {
-  .player-container {
-    width: 100vw;
-    height: 100vh;
-    background-size: 100% auto;
-  }
-
-  .song-list-button {
-    top: 60%;
-  }
-}
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
 
 .fancy-script {
   position: absolute;
-  bottom: 5%;
+  bottom: 43%;
   left: 50%;
   white-space: nowrap;
   transform: translateX(-50%);
@@ -105,12 +91,68 @@ audio {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* 🚀 Disable Zoom / Shrink */
-/* meta[name="viewport"] {
-  content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+
+@media (max-width: 1000px) {
+  .player-container {
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+  }
+  .status-display {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+  }
+  
+  audio {
+    position: absolute;
+    top: calc(32% + 3vh);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    max-width: 700px;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ff69b4 !important;
+    border: 2px solid #ff1493;
+  }
+  
+  .song-list-button {
+    position: absolute;
+    top: calc(8% + 11vh);
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(255, 105, 180, 0.2));
+    color: white;
+    padding: 4px 90px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 2vh;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+  }
+  .fancy-script {
+    position: absolute;
+    bottom: 52%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-family: "Great Vibes", cursive;
+    font-size: 7vh;
+    color: #dfe7ef;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
 }
 
-/* ✅ Absolute Hard Lock */
-/* * { */
-/* touch-action: none; */
-/* } */
+
+ 
+
+
+
+
+
+
+

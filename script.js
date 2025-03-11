@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (isButtonClicked(x, y, prevButton)) {
       playPrevSong();
     }
+    play(5)
   });
 
   function isButtonClicked(x, y, button) {

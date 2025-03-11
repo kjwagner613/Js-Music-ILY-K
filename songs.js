@@ -1,7 +1,7 @@
 const songs = [
   {
-    name: "Your Song, you knmow...",
-    artist: "ArNatasha Bedingfieldtist",
+    name: "Your Song",
+    artist: "Natasha Bedingfield",
     file: "https://dl.dropboxusercontent.com/scl/fi/z0qjlydj4x2t3c5qaggxe/Unwritten.mp3?rlkey=0j5dpxnkq0ra0kgpgeiomyewf&st=t1tg6lft&dl=0",
   },
   {
