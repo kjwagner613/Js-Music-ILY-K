@@ -4,7 +4,7 @@ body {
   background-color: #ffe4ec;
   padding: 0;
   margin: 2px;
-  height: auto;
+  height: 100vh;
   width: 100vw;
   min-width: 100%;
   /* min-height: 1000px; */
@@ -12,6 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 /* 🎀 Player Box - Locks Full Image */
@@ -20,19 +21,20 @@ body {
   width: 100vw;
   max-width: 800px;
   height: 100vh;
-  max-height: 1000px;
   background-image: url("assets/layeredSjPlayer.png");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center top;
   position: relative;
+  border: 5px solid white;
 }
 
 /* 🎶 Status Display inside LCD */
 .status-display {
-  /* position: absolute; */
-  top: 20vh;
-  left: 50vw;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: left;
   font-size: 1.8vh;
   font-family: Digital-7;
@@ -46,20 +48,33 @@ body {
 /* 🎵 Song List Button */
 .song-list-button {
   position: absolute;
-  top: 75%;
+  top: calc(10% + 12vh); 
   left: 50%;
   transform: translateX(-50%);
   background-color: #ff69b4;
   color: white;
-  border: none;
-  padding: 12px 60px;
+  border: 5px solid white;
+  padding: 4px 90px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 2vh;
   transition: all 0.3s;
 }
 
-
+audio {
+  position: absolute;
+  top: calc(40% + 3vh); /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  border-radius: 10px;
+  background: white;
+  padding: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ff69b4 !important; /* Hot pink */
+  border: 2px solid #ff1493;
+}
 
 /* 💀 Completely Hide Playlist */
 #playlist {
@@ -84,6 +99,19 @@ body {
     top: 60%;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.fancy-script {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  font-family: 'Great Vibes', cursive;
+  font-size: 7vh;
+  color: #dfe7ef;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
 
 /* 🚀 Disable Zoom / Shrink */
 /* meta[name="viewport"] {

@@ -1,5 +1,10 @@
 const songs = [
   {
+    name: "Your Song, you knmow...",
+    artist: "ArNatasha Bedingfieldtist",
+    file: "https://dl.dropboxusercontent.com/scl/fi/z0qjlydj4x2t3c5qaggxe/Unwritten.mp3?rlkey=0j5dpxnkq0ra0kgpgeiomyewf&st=t1tg6lft&dl=0",
+  },
+  {
     name: "The Craving",
     artist: "Boone",
     file: "https://dl.dropboxusercontent.com/scl/fi/u2io5qs34uydyev225wz0/01-The-Craving-Jenna-s-version.mp3?rlkey=kqqvt6b0usswdjfsucwy0aj39&st=xyp206t4&dl=0",
@@ -51,7 +56,7 @@ const songs = [
   },
   {
     name: "You and Me",
-    artist: "Artist",
+    artist: "Yelawolf",
     file: "https://dl.dropboxusercontent.com/scl/fi/str3lbg8enqezfzahzmz8/You-and-Me.mp3?rlkey=dfqwaaswjobips35chr85j8r5&st=en4xe588&dl=0",
   },
   {
@@ -74,9 +79,5 @@ const songs = [
     artist: "Boone",
     file: "https://dl.dropboxusercontent.com/scl/fi/h3jq6f1yk5tdo5jxy6go5/Beautiful-Things.mp3?rlkey=avgln5y50ykm2m39azbvxdord&st=t0b5p0cz&dl=0",
   },
-  {
-    name: "Your Song, you knmow...",
-    artist: "ArNatasha Bedingfieldtist",
-    file: "https://dl.dropboxusercontent.com/scl/fi/z0qjlydj4x2t3c5qaggxe/Unwritten.mp3?rlkey=0j5dpxnkq0ra0kgpgeiomyewf&st=t1tg6lft&dl=0",
-  },
+ 
 ];
