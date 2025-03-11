@@ -106,7 +106,7 @@ audio {
   
   audio {
     position: absolute;
-    top: calc(35% + 3vh);
+    top: calc(40% + 3vh);
     left: 50%;
     transform: translateX(-50%);
     width: 75%;
@@ -136,7 +136,7 @@ audio {
   }
   .fancy-script {
     position: absolute;
-    bottom: 50%;
+    bottom: 45%;
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
