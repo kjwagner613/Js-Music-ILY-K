@@ -100,13 +100,13 @@ audio {
   }
   .status-display {
     position: absolute;
-    top: 8%;
+    top: 10%;
     left: 50%;
   }
   
   audio {
     position: absolute;
-    top: calc(32% + 3vh);
+    top: calc(35% + 3vh);
     left: 50%;
     transform: translateX(-50%);
     width: 75%;
@@ -122,7 +122,7 @@ audio {
   
   .song-list-button {
     position: absolute;
-    top: calc(8% + 11vh);
+    top: calc(11% + 11vh);
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(255, 105, 180, 0.2));
@@ -136,7 +136,7 @@ audio {
   }
   .fancy-script {
     position: absolute;
-    bottom: 52%;
+    bottom: 50%;
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
