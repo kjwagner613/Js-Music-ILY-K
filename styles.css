@@ -136,7 +136,7 @@ audio {
   }
   .fancy-script {
     position: absolute;
-    bottom: 45%;
+    bottom: 39%;
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
