@@ -55,10 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateStatus("Playing", songs[index].name);
   }
 
+  //currentSongDisplay.textContent = `${currentSong.name}\n${currentSong.artist}`;
+  //currentSongDisplay.innerHTML = `${currentSong.name}<br>${currentSong.artist}`;
+
   function updateStatus(status, songName) {
     statusDisplay.textContent = status;
     const currentSong = songs[currentSongIndex];
-    currentSongDisplay.textContent = `${currentSong.name}\n${currentSong.artist}`;
+    currentSongDisplay.innerHTML = `${currentSong.name}<br>${currentSong.artist}`;
   }
 
   audioPlayer.addEventListener("ended", () => {
