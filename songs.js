@@ -5,6 +5,16 @@ const songs = [
     file: "https://dl.dropboxusercontent.com/scl/fi/z0qjlydj4x2t3c5qaggxe/Unwritten.mp3?rlkey=0j5dpxnkq0ra0kgpgeiomyewf&st=t1tg6lft&dl=0",
   },
   {
+    name: "You Make Me Happy",
+    artist: "My Sun & Stars",
+    file: "https://dl.dropboxusercontent.com/scl/fi/enh1u1me7qs7db2zjhea0/You-make-me-happy.mp3?rlkey=hz3fv5thr6k5o1q3m5n96e1ei&st=wiut35uu&dl=0",
+  },
+  {
+    name: "Home",
+    artist: "Edward Sharpe & The Magnetic Zeros",
+    file: "https://dl.dropboxusercontent.com/scl/fi/3znyn7c2q03ot47f5db4x/Home.mp3?rlkey=tkjrxkkyf98yg3jbnmbsc4pyx&st=eyjxjewu&dl=0",
+  },
+  {
     name: "One Night in Bangkok",
     artist: "Murray Head",
     file: "https://dl.dropboxusercontent.com/scl/fi/f8slc50wqfiabfyq8c5sb/One-Night-In-Bangkok.mp3?rlkey=sbjeqdoij6w8643ptrwz2mcib&st=uiywotlt&dl=0",
@@ -34,7 +44,7 @@ const songs = [
     artist: "Audioslave",
     file: "https://dl.dropboxusercontent.com/scl/fi/qd9fefsq6txiwnkw97gzw/I-Am-The-Highway.mp3?rlkey=y4kh6hssi7xnpk414i80ero9d&st=uuw8nthw&dl=0",
   },
-    {
+  {
     name: "Pretty Slowly",
     artist: "Boone",
     file: "https://dl.dropboxusercontent.com/scl/fi/ui9dc8r8fxpm5s6tx8ymi/Pretty-Slowly.mp3?rlkey=k1mib3p97kr51q5jhul1kifda&st=7ho939vn&dl=0",
@@ -84,5 +94,4 @@ const songs = [
     artist: "Damien Rice",
     file: "https://dl.dropboxusercontent.com/scl/fi/8859rfgqzp1m5gjx3g81i/02-Volcano.mp3?rlkey=aibl7xc3hxurvq4luhc1ciftt&st=y3l49ud6&dl=0",
   },
- 
 ];
