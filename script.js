@@ -1,50 +1,77 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const songs = [];
   const audioPlayer = document.getElementById("audioPlayer");
   const statusDisplay = document.getElementById("status");
   const currentSongDisplay = document.getElementById("current-song");
+  const playerContainer = document.querySelector(".player-container");
+
   let currentSongIndex = 0;
 
-  // Fetch songs from a local or static source
-  async function fetchSongs() {
-    const endpoint = `/songs`; // Replace this with your actual local or static source URL
-    try {
-      const response = await fetch(endpoint);
-      const data = await response.json(); //this is what i want
+  playerContainer.addEventListener("click", (event) => {
+    const rect = playerContainer.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
 
-      // Add each song to the playlist
-      data.forEach((song) => {
-        songs.push({
-          name: song.name,
-          artist: song.artist || "Unknown Artist",
-          file: song.url,
-        });
-      });
+    const prevButton = { x: 109, y: 466, width: 217 - 109, height: 568 - 466 };
+    const playButton = { x: 260, y: 469, width: 377 - 260, height: 571 - 469 };
+    const pauseButton = { x: 419, y: 464, width: 526 - 419, height: 564 - 464 };
+    const nextButton = { x: 576, y: 467, width: 683 - 576, height: 574 - 467 };
 
-      // Start playing the first song if there are any
-      if (songs.length > 0) {
-        playSong(0);
-      } else {
-        console.error("No songs found.");
-      }
-    } catch (error) {
-      console.error("Error fetching songs:", error);
+    if (isButtonClicked(x, y, playButton)) {
+      audioPlayer.play();
+    } else if (isButtonClicked(x, y, pauseButton)) {
+      audioPlayer.pause();
+    } else if (isButtonClicked(x, y, nextButton)) {
+      playNextSong();
+    } else if (isButtonClicked(x, y, prevButton)) {
+      playPrevSong();
     }
+  });
+
+  function isButtonClicked(x, y, button) {
+    return (
+      x >= button.x &&
+      x <= button.x + button.width &&
+      y >= button.y &&
+      y <= button.y + button.height
+    );
   }
 
   function playSong(index) {
     audioPlayer.src = songs[index].file;
-    audioPlayer
-      .play()
-      .catch((error) => console.error("Error playing song:", error));
+    audioPlayer.play().catch((error) => {
+      console.error("Error playing song:", error);
+    });
     currentSongIndex = index;
     updateStatus("Playing", songs[index].name);
   }
 
   function updateStatus(status, songName) {
     statusDisplay.textContent = status;
-    currentSongDisplay.textContent = songName;
+    const currentSong = songs[currentSongIndex];
+    currentSongDisplay.innerHTML = `${currentSong.name}<br>${currentSong.artist}`;
   }
 
-  fetchSongs(); // Call this function when the page loads
+  audioPlayer.addEventListener("ended", () => {
+    playNextSong();
+  });
+
+  function playNextSong() {
+    console.log("Playing next song");
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    playSong(currentSongIndex);
+  }
+
+  function playPrevSong() {
+    console.log("Playing previous song");
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    playSong(currentSongIndex);
+  }
+
+  const selectedSongIndex = localStorage.getItem("selectedSongIndex");
+  if (selectedSongIndex !== null) {
+    playSong(parseInt(selectedSongIndex));
+    localStorage.removeItem("selectedSongIndex");
+  } else {
+    playSong(0);
+  }
 });
