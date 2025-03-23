@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const endpoint = `/songs`; // Replace this with your actual local or static source URL
     try {
       const response = await fetch(endpoint);
-      const data = await response.json();
+      const data = await response.json(); //this is what i want
 
       // Add each song to the playlist
-      data.forEach(song => {
+      data.forEach((song) => {
         songs.push({
           name: song.name,
           artist: song.artist || "Unknown Artist",
@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function playSong(index) {
     audioPlayer.src = songs[index].file;
-    audioPlayer.play().catch(error => console.error("Error playing song:", error));
+    audioPlayer
+      .play()
+      .catch((error) => console.error("Error playing song:", error));
     currentSongIndex = index;
     updateStatus("Playing", songs[index].name);
   }
