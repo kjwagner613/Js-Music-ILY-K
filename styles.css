@@ -149,3 +149,46 @@ audio {
     color: #dfe7ef;
     text-shadow: 1px 1px 2px rgb(17, 16, 16), 0 0 1em rgb(24, 24, 25), 0 0 0.2em rgb(17, 17, 19);
    }
+
+   .song-list-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #song-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Space between buttons */
+    list-style: none;
+    padding: 0;
+    max-height: 80vh; /* Adjust as needed for scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  #song-list li {
+    background: #ff69b4; /* Hot pink */
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s;
+    margin: 0; /* Remove default list item margins */
+  }
+  #shuffle-button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  #song-list li:hover,
+  #song-list li:active {
+    background: #ff1493; /* Deep pink */
+    transform: scale(1.05);
+  }

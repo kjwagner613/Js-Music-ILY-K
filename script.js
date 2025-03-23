@@ -1,18 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const audioPlayer = document.getElementById("audioPlayer");
-  const playlist = document.getElementById("playlist");
   const statusDisplay = document.getElementById("status");
   const currentSongDisplay = document.getElementById("current-song");
-  const playerContainer = document.querySelector('.player-container');
+  const playerContainer = document.querySelector(".player-container");
+  const shuffleButton = document.getElementById("shuffle-button");
 
+  
   let currentSongIndex = 0;
 
-  // Load playlist dynamically
-  songs.forEach((song, index) => {
-    const li = document.createElement("li");
-    li.textContent = song.name;
-    li.addEventListener("click", () => playSong(index));
-    playlist.appendChild(li);
+  shuffleButton.addEventListener("click", () => {
+    shuffleSongs();
   });
 
   playerContainer.addEventListener("click", (event) => {
@@ -54,9 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateStatus("Playing", songs[index].name);
   }
 
-  //currentSongDisplay.textContent = `${currentSong.name}\n${currentSong.artist}`;
-  //currentSongDisplay.innerHTML = `${currentSong.name}<br>${currentSong.artist}`;
-
   function updateStatus(status, songName) {
     statusDisplay.textContent = status;
     const currentSong = songs[currentSongIndex];
@@ -79,21 +73,20 @@ document.addEventListener("DOMContentLoaded", () => {
     playSong(currentSongIndex);
   }
 
-  // Check if a song was selected from the song list page
+  function shuffleSongs() {
+    for (let i = songs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [songs[i], songs[j]] = [songs[j], songs[i]]; // Swap elements
+    }
+    currentSongIndex = 0; // Reset to the first shuffled song
+    playSong(currentSongIndex);
+  }
+
   const selectedSongIndex = localStorage.getItem("selectedSongIndex");
   if (selectedSongIndex !== null) {
     playSong(parseInt(selectedSongIndex));
     localStorage.removeItem("selectedSongIndex");
   } else {
-    playSong(0); // Start with the first song
+    playSong(0);
   }
 });
-
-function togglePlaylist() {
-  var playlist = document.getElementById('playlist');
-  if (playlist.style.display === 'none') {
-    playlist.style.display = 'block';
-  } else {
-    playlist.style.display = 'none';
-  }
-}
