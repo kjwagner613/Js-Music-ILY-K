@@ -20,11 +20,13 @@
 
       songs.forEach((song, index) => {
         const li = document.createElement("li");
-        li.textContent = `${song.name} - ${song.artist}`;
-        li.addEventListener("click", () => {
+        const button = document.createElement("button");
+        button.textContent = `${song.name} - ${song.artist}`;
+        button.addEventListener("click", () => {
           localStorage.setItem("selectedSongIndex", index);
           window.location.href = "index.html";
         });
+        li.appendChild(button);
         songList.appendChild(li);
       });
     </script>
