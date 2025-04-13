@@ -25,6 +25,51 @@ const songs = [
     file: "https://dl.dropboxusercontent.com/scl/fi/f8slc50wqfiabfyq8c5sb/One-Night-In-Bangkok.mp3?rlkey=sbjeqdoij6w8643ptrwz2mcib&st=uiywotlt&dl=0",
   },
   {
+    name: "Adventure of a Lifetime",
+    artist: "Coldplay",
+    file: "https://dl.dropboxusercontent.com/scl/fi/50ru7cmbza3n7ouzh4huw/05-Adventure-Of-A-Lifetime.mp3?rlkey=mt8gbmjfzcvwc1rk4ianupxvd&st=owi7tws1&dl=0",
+  },
+  {
+    name: "Afterlife",
+    artist: "Ingrid Michaelson",
+    file: "https://dl.dropboxusercontent.com/scl/fi/m5zlflcsk9dbkedhi8avf/12-Afterlife.mp3?rlkey=7363563a23lbv887vkwgywar4&st=wrq6hn60&dl=0",
+  },
+  {
+    name: "Night We Met",
+    artist: "Lord Huron",
+    file: "https://dl.dropboxusercontent.com/scl/fi/wlux12r7hc84iz5njh6hl/14-The-Night-We-Met.mp3?rlkey=ee63lschrzeiwh6moj53004hb&st=80l31the&dl=0",
+  },
+  {
+    name: "Love is like Ghosts",
+    artist: "Lord Huron",
+    file: "https://dl.dropboxusercontent.com/scl/fi/v1nx88wzj9fea4v4pneid/01-Love-Like-Ghosts.mp3?rlkey=9l3rtwbqq76ipqd60je9h366i&st=h10q16t4&dl=0",
+  },
+  {
+    name: "Soldier",
+    artist: "Ingrid Michaelson",
+    file: "https://dl.dropboxusercontent.com/scl/fi/ro6g3prfr0j6tkj6ltfbn/01-Soldier.mp3?rlkey=diiytwp7pj9njohdfnn9ukh80&st=6k2eugq4&dl=0",
+  },
+  {
+    name: "Everybody",
+    artist: "Ingrid Michaelson",
+    file: "https://dl.dropboxusercontent.com/scl/fi/qo41v4ueyqumtdjjlldio/02-Everybody.mp3?rlkey=ov1kx1swhrpxwt6g6z5snlesd&st=guf95cx8&dl=0",
+  },
+  {
+    name: "Automatic",
+    artist: "The Lumineers",
+    file: "https://dl.dropboxusercontent.com/scl/fi/djdgp197425lwz92h8jb8/04.-Automatic.mp3?rlkey=9yz7vw0w35ur2r2a7icx9kwhs&st=823na1tm&dl=0",
+  },
+  {
+    name: "Hey",
+    artist: "The Lumineers",
+    file: "https://dl.dropboxusercontent.com/scl/fi/lrmbia2dfe3sf0po2w1yn/05-Ho-Hey.mp3?rlkey=jueak8zfhjl5yqb4dub9igcgx&st=573onq41&dl=0",
+  },
+  {
+    name: "Woman",
+    artist: "Mumford & Sons",
+    file: "https://dl.dropboxusercontent.com/scl/fi/y9dg72cq6e6emodqa2c1p/1-03-Woman.mp3?rlkey=7ue1kvfpa0w3p6s7b8lcnvz0w&st=zkshtzo8&dl=0",
+  },
+  {
     name: "We saw gold",
     artist: "Tones & I",
     file: "https://dl.dropboxusercontent.com/scl/fi/m0nsuopkro244w30on1ej/I-Get-High.mp3?rlkey=giuzvlv8i1euu2qb3iix5xe6p&st=wbe5y86r&dl=0",
@@ -219,4 +264,4 @@ const songs = [
     artist: "BeeGees",
     file: "https://dl.dropboxusercontent.com/scl/fi/etbf7ap39rmcnel450ddm/02-Night-Fever.mp3?rlkey=1h4wjib7rqg2747mzx5h6rgik&st=gt57ur1a&dl=0",
   },
- ];
+];
