@@ -1,5 +1,10 @@
-//updated 4/12/2025
+//updated 4/15/2025
 const songs = [
+  {
+    name: "Roads",
+    artist: "Portishead",
+    file: "https://dl.dropboxusercontent.com/scl/fi/ffpdxj173gya552t0plc4/1-08-Roads.mp3?rlkey=ajerwluf1rfiruumx0hj5ir9w&st=xrgm80zw&dl=0",
+  },
   {
     name: "Unwritten",
     artist: "Natasha Bedingfield",
@@ -11,6 +16,12 @@ const songs = [
     file: "https://dl.dropboxusercontent.com/scl/fi/enh1u1me7qs7db2zjhea0/You-make-me-happy.mp3?rlkey=hz3fv5thr6k5o1q3m5n96e1ei&st=wiut35uu&dl=0",
   },
   {
+    name: "Sour Times",
+    artist: "Portishead",
+    file: "https://dl.dropboxusercontent.com/scl/fi/t4u4apobecxuwdd36pcbi/1-02-Sour-Times.mp3?rlkey=ugulhicj27pf1d70fw0qhxljg&st=kwlow8xi&dl=0",
+  },
+  
+  {
     name: "Beloved Wife",
     artist: "Natalie Merchant",
     file: "https://dl.dropboxusercontent.com/scl/fi/qhoop0uy5s4tl0nez0x8m/02-Beloved-Wife.mp3?rlkey=0y5bh8yvd71kn784dxtykiq84&st=okavdhjq&dl=0",
@@ -20,6 +31,12 @@ const songs = [
     artist: "Edward Sharpe & The Magnetic Zeros",
     file: "https://dl.dropboxusercontent.com/scl/fi/3znyn7c2q03ot47f5db4x/Home.mp3?rlkey=tkjrxkkyf98yg3jbnmbsc4pyx&st=eyjxjewu&dl=0",
   },
+  {
+    name: "Hot Gates",
+    artist: "Mumford & Sons",
+    file: "https://dl.dropboxusercontent.com/scl/fi/2nhruju2zg93ige8u9imf/1-12-Hot-Gates.mp3?rlkey=u9bmgf3mf1fg3t25sxgg95riw&st=5dok7308&dl=0",
+  },
+  
   {
     name: "One Night in Bangkok",
     artist: "Murray Head",
