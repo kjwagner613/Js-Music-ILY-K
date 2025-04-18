@@ -1,10 +1,30 @@
 //updated 4/15/2025
 const songs = [
   {
-    name: "Roads",
-    artist: "Portishead",
-    file: "https://dl.dropboxusercontent.com/scl/fi/ffpdxj173gya552t0plc4/1-08-Roads.mp3?rlkey=ajerwluf1rfiruumx0hj5ir9w&st=xrgm80zw&dl=0",
+    name: "Big Mistake",
+    artist: "Natalie Imbruglia",
+    file: "https://dl.dropboxusercontent.com/scl/fi/n513kbpwupjqcrm5jvvzo/1-03-Big-Mistake.mp3?rlkey=p9xfg0lk0p5he85hpi1p8a9qu&st=gzpn72ts&dl=0",
   },
+ { 
+  name: "Superman",
+  artist: "Sterophonics",
+  file: "https://dl.dropboxusercontent.com/scl/fi/j078dliaqocvzgtvcsphg/2-01-Superman.mp3?rlkey=6lau99btmlqr65p3i1m3imw31&st=y49m987e&dl=0",
+},
+{
+name: "Forgiven",
+artist: "Alanis Morissette",
+file: "https://dl.dropboxusercontent.com/scl/fi/gadamrz7ngkc0vgu9v3lc/Forgiven.mp3?rlkey=gdvag0j5ioudwrqp5hfvz6vzt&st=34bvi94d&dl=0",
+},
+{
+name: "Everyody's Gotta Learn Sometime",
+artist: "The Korgis",
+file: "https://dl.dropboxusercontent.com/scl/fi/9yeu212ucgfwox8t7q4rs/01-Everybody-s-Got-To-Learn-Sometime.mp3?rlkey=uyvuepch4r6gg2evws8xtsvaq&st=fanctea2&dl=0",
+},
+{
+name: "Roads",
+artist: "Portishead",
+file: "https://dl.dropboxusercontent.com/scl/fi/ffpdxj173gya552t0plc4/1-08-Roads.mp3?rlkey=ajerwluf1rfiruumx0hj5ir9w&st=xrgm80zw&dl=0",
+},
   {
     name: "Unwritten",
     artist: "Natasha Bedingfield",
