@@ -1,24 +1,29 @@
 //updated 4/24/2025
 const songs = [
   {
-    name: " Wonderful",
+    name: "Wonderful",
     artist: "Tones & I",
     file: "https://dl.dropboxusercontent.com/scl/fi/23qr9l36ayox3vw7jxsla/07.-Wonderful.mp3?rlkey=vfrqrxdtebr8mf33ijhuvh8gj&st=tkfaw7ep&dl=0",
   },
   {
-    name: "Big Mistake",
-    artist: "Natalie Imbruglia",
-    file: "https://dl.dropboxusercontent.com/scl/fi/n513kbpwupjqcrm5jvvzo/1-03-Big-Mistake.mp3?rlkey=p9xfg0lk0p5he85hpi1p8a9qu&st=gzpn72ts&dl=0",
+    name: "I Will Survive",
+    artist: "Cake",
+    file: "https://dl.dropboxusercontent.com/scl/fi/6f8sfx7o3b632k9fsinu6/07-I-Will-Survive.mp3?rlkey=47i4zhrzecz67sop8xkx0is4j&st=3v9v3s8y&dl=0",
   },
   {
-    name: "Superman",
-    artist: "Sterophonics",
-    file: "https://dl.dropboxusercontent.com/scl/fi/j078dliaqocvzgtvcsphg/2-01-Superman.mp3?rlkey=6lau99btmlqr65p3i1m3imw31&st=y49m987e&dl=0",
+    name: "Love you Madly",
+    artist: "Cake",
+    file: "https://dl.dropboxusercontent.com/scl/fi/5tcohtntpa2rh2gfizkuh/09-Love-You-Madly.mp3?rlkey=kmiu63sgy1i4jtxql6m77k564&st=vojf2ufc&dl=0",
   },
   {
-    name: "Forgiven",
-    artist: "Alanis Morissette",
-    file: "https://dl.dropboxusercontent.com/scl/fi/gadamrz7ngkc0vgu9v3lc/Forgiven.mp3?rlkey=gdvag0j5ioudwrqp5hfvz6vzt&st=34bvi94d&dl=0",
+    name: "Short Skirt, Long Jacket",
+    artist: "Cake",
+    file: "https://dl.dropboxusercontent.com/scl/fi/7fakohoy18rsqvt0tdge8/04-Short-Skirt_Long-Jacket.mp3?rlkey=aaqamzt2dmrxpnsyijvquxjoa&st=p7fo25nr&dl=0",
+  },
+  {
+    name: "Perhaps, Perhaps, Perhaps",
+    artist: "Cake",
+    file: "https://dl.dropboxusercontent.com/scl/fi/ebh7neq7c2l2afjoqzqt1/09-Perhaps-Perhaps-Perhaps.mp3?rlkey=67z3bsl3yyoy4u3p7aoo2pwke&st=v5j8s2ii&dl=0",
   },
   {
     name: "Everyody's Gotta Learn Sometime",
@@ -306,5 +311,20 @@ const songs = [
     name: "Night Fever",
     artist: "BeeGees",
     file: "https://dl.dropboxusercontent.com/scl/fi/etbf7ap39rmcnel450ddm/02-Night-Fever.mp3?rlkey=1h4wjib7rqg2747mzx5h6rgik&st=gt57ur1a&dl=0",
+  },
+  {
+    name: "Big Mistake",
+    artist: "Natalie Imbruglia",
+    file: "https://dl.dropboxusercontent.com/scl/fi/n513kbpwupjqcrm5jvvzo/1-03-Big-Mistake.mp3?rlkey=p9xfg0lk0p5he85hpi1p8a9qu&st=gzpn72ts&dl=0",
+  },
+  {
+    name: "Superman",
+    artist: "Sterophonics",
+    file: "https://dl.dropboxusercontent.com/scl/fi/j078dliaqocvzgtvcsphg/2-01-Superman.mp3?rlkey=6lau99btmlqr65p3i1m3imw31&st=y49m987e&dl=0",
+  },
+  {
+    name: "Forgiven",
+    artist: "Alanis Morissette",
+    file: "https://dl.dropboxusercontent.com/scl/fi/gadamrz7ngkc0vgu9v3lc/Forgiven.mp3?rlkey=gdvag0j5ioudwrqp5hfvz6vzt&st=34bvi94d&dl=0",
   },
 ];
