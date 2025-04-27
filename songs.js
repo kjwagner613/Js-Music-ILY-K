@@ -21,6 +21,11 @@ const songs = [
     file: "https://dl.dropboxusercontent.com/scl/fi/7fakohoy18rsqvt0tdge8/04-Short-Skirt_Long-Jacket.mp3?rlkey=aaqamzt2dmrxpnsyijvquxjoa&st=p7fo25nr&dl=0",
   },
   {
+    name: "Cat People - Putting Out Fire",
+    artist: "David Bowie",
+    file: "https://dl.dropboxusercontent.com/scl/fi/zqap5gxnnexch1rengisb/1-663-Cat-People-Putting-Out-Fire.mp3?rlkey=ywphbhljjil7pginrn40hmu87&st=0ob3m5ga&dl=0",
+  },
+  {
     name: "Perhaps, Perhaps, Perhaps",
     artist: "Cake",
     file: "https://dl.dropboxusercontent.com/scl/fi/ebh7neq7c2l2afjoqzqt1/09-Perhaps-Perhaps-Perhaps.mp3?rlkey=67z3bsl3yyoy4u3p7aoo2pwke&st=v5j8s2ii&dl=0",
