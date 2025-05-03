@@ -1,4 +1,4 @@
-//updated 4/24/2025
+//updated 5/02/2025
 const songs = [
   {
     name: "Wonderful",
@@ -9,6 +9,26 @@ const songs = [
     name: "I Will Survive",
     artist: "Cake",
     file: "https://dl.dropboxusercontent.com/scl/fi/6f8sfx7o3b632k9fsinu6/07-I-Will-Survive.mp3?rlkey=47i4zhrzecz67sop8xkx0is4j&st=3v9v3s8y&dl=0",
+  },
+  {
+    name: "Never Enough",
+    artist: "Loren Allred",
+    file: "https://dl.dropboxusercontent.com/scl/fi/354m6t1yvo7ptwunm0fn2/1-06-Never-Enough.mp3?rlkey=aexgktj1e4kqele6m51pixy7b&st=cbb6px3c&dl=0",
+  },
+  {
+    name: "Sail Away",
+    artist: "David Gray",
+    file: "https://dl.dropboxusercontent.com/scl/fi/p9o0aotznrabhcodozr2w/09-Sail-Away.mp3?rlkey=1xiomfopplzptdmwuj3ll68pl&st=ujh7d4ur&dl=0",
+  },
+  {
+    name: "Takes a lot to know a Man",
+    artist: "Damien Rice",
+    file: "https://dl.dropboxusercontent.com/scl/fi/f2br1lb70rzvxhafhn3hb/02-It-Takes-a-Lot-to-Know-a-Man.mp3?rlkey=nkar2lq8z19fvvjt61dsg2q9g&st=oxesl61a&dl=0",
+  },
+  {
+    name: "Better Together",
+    artist: "Jack Johnson",
+    file: "https://dl.dropboxusercontent.com/scl/fi/1krmjt0fb3rox46fjkkjj/01-Better-Together.mp3?rlkey=vw7zth9naj4t5gfjmstc467f0&st=ywp7byzh&dl=0",
   },
   {
     name: "Love you Madly",
