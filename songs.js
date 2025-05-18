@@ -1,5 +1,10 @@
-//updated 5/03/2025
+//updated 5/18/2025
 const songs = [
+  {
+    name: "Somewhere Over the Rainbow",
+    artist: "Israel Kamakawiwo'ole",
+    file: "https://dl.dropboxusercontent.com/scl/fi/8ziqlpmish469stphpc1m/Somewhere-over-the-Rainbow.mp3?rlkey=7q9c1oad394o80lg0euknzwop&st=u9uh5ema&dl=00",
+  },
   {
     name: "Free to wear sunscreen",
     artist: "Baz Luhrmann",
