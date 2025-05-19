@@ -1,13 +1,82 @@
 //updated 5/18/2025 p2
 const songs = [
   {
+    name: "Don't Stop Believin'",
+    artist: "Journey",
+    file: "https://dl.dropboxusercontent.com/scl/fi/fhim6y5lmtjzii5qrh13q/05-Don-t-Stop-Believin.mp3?rlkey=sm3z8rje5ougtzrjf8ew5zb29&st=xqjvtzt7&dl=0",
+  },
+  {
+    name: "Mamma Mia",
+    artist: "ABBA",
+    file: "https://dl.dropboxusercontent.com/scl/fi/3zjh1qtr0nvcz27qjdvc3/01-Mamma-Mia.mp3?rlkey=y8ds8ttur4auck1gxgejgc44m&st=pa8j4knz&dl=0",
+  },
+  {
+    name: "I wanna know what love is",
+    artist: "Foreigner",
+    file: "https://dl.dropboxusercontent.com/scl/fi/hjggc3qc0pfo4jfjgcrwt/1-286-I-Want-to-Know-What-Love-Is-1.mp3?rlkey=g2fv6c0dhbr3gjlmmtomxbra8&st=hyb9foj1&dl=0",
+  },
+  {
+    name: "Goodbye Yellow Brick Road",
+    artist: "Elton John",
+    file: "https://dl.dropboxusercontent.com/scl/fi/14o4ugl7nyq3a0persu1z/04-Goodbye-Yellow-Brick-Road.mp3?rlkey=02gyozmqwaw1dbpftds19vz04&st=d6pq86s2&dl=0",
+  },
+  {
+    name: "Nikita",
+    artist: "Elton John",
+    file: "https://dl.dropboxusercontent.com/scl/fi/ysmqippk32bi3x8ygs4ts/05-Nikita.mp3?rlkey=dw3hc6qsgpe5bxa04hcup9hs4&st=1w4yzsve&dl=0",
+  },
+  {
+    name: "I'm Still Standing",
+    artist: "Elton John",
+    file: "https://dl.dropboxusercontent.com/scl/fi/z364l2wca993g7mtex1nz/06-I-m-Still-Standing.mp3?rlkey=glcstbuii9ws5hdzsucauas25&st=jhymve8o&dl=0",
+  },
+  {
+    name: "Dont Stop Me Now",
+    artist: "Queen",
+    file: "https://dl.dropboxusercontent.com/scl/fi/5kwogfiq2s36duvzz1ucj/07-Don-t-Stop-Me-Now.mp3?rlkey=3y8illq1qg8ridtnebuz63b6y&st=alfqncgw&dl=0",
+  },
+  {
+    name: "Don't Go Breaking My Heart",
+    artist: "Elton John & Kiki Dee",
+    file: "https://dl.dropboxusercontent.com/scl/fi/kttxj718kz76t95vgl71g/08-Don-t-Go-Breaking-My-Heart-Remas.mp3?rlkey=qitwi8hocyv83921td7cdzqyf&st=8uwbkll9&dl=0",
+  },
+  {
+    name: "Shallow",
+    artist: "Lady Gaga & Bradley Cooper",
+    file: "https://dl.dropboxusercontent.com/scl/fi/685ai8d7fjxp6bb96vaxc/12-Shallow.mp3?rlkey=zerya1ruxfd08u6oio2tqjocu&st=9u6eu3jv&dl=0",
+  },
+  {
+    name: "Music To My Eyes",
+    artist: "Lady Gaga & Bradley Cooper",
+    file: "https://dl.dropboxusercontent.com/scl/fi/sd80tzehqby2k6ge94p2h/14-Music-To-My-Eyes.mp3?rlkey=hnmsywz29bxm8qw10b9hxp3pz&st=0uhx5xi1&dl=0",
+  },
+  {
+    name: "Always Remember Us This Way",
+    artist: "Lady Gaga and Bradley Cooper",
+    file: "https://dl.dropboxusercontent.com/scl/fi/v5folu118b2l2e8ea12ik/17-Always-Remember-Us-This-Way.mp3?rlkey=ftzsk8y3r565tnjh3p6770f97&st=6w2bfypi&dl=0",
+  },
+  {
+    name: "We Are the Champions",
+    artist: "Queen",
+    file: "https://dl.dropboxusercontent.com/scl/fi/fl063q39qp0rdi1wxlymq/17-We-Are-the-Champions.mp3?rlkey=jzecp7cormbp1gnip0x4w7rjw&st=629w6nt0&dl=0",
+  },
+  {
+    name: "Hotel California",
+    artist: "Eagles",
+    file: "https://dl.dropboxusercontent.com/scl/fi/vpnfv8h7en7szakw2ew1x/01-Hotel-California.mp3?rlkey=9ametm3qzjq98p09ymt0gw5py&st=zc0ccr8q&dl=0",
+  },
+  {
+    name: "Rocketman",
+    file: "https://dl.dropboxusercontent.com/scl/fi/lx5231jlxosz6mqjwdlje/01-Rocket-Man-I-Think-It-s-Going-to.mp3?rlkey=gyxy0cmn6h75ffpoax2wmwu5j&st=lqmwbojo&dl=0",
+  },
+  {
     name: "Somewhere Over the Rainbow",
-    artist: "Israel Kamakawiwo'ole",
+    file: "https://dl.dropboxusercontent.com/scl/fi/lc7lvxpna6lgd0e5vij8d/Over-the-Rainbow-BrotherIs.mp3?rlkey=w6fhadp0amlkfgklqom2oqwjc&st=p0ryij8l&dl=0",
     file: "https://dl.dropboxusercontent.com/scl/fi/lc7lvxpna6lgd0e5vij8d/Over-the-Rainbow-BrotherIs.mp3?rlkey=w6fhadp0amlkfgklqom2oqwjc&st=p0ryij8l&dl=0mp3",
   },
   {
     name: "Free to wear sunscreen",
-    artist: "Baz Luhrmann",
+    file: "https://dl.dropboxusercontent.com/scl/fi/k5anr05xp6hqmiltvmejc/01-Everybody-s-Free-To-Wear-Sunscreen-Edit.mp3?rlkey=1r8dma9sm32jbm6qj6ao2hqhy&st=6gyim8to&dl=0",
     file: "https://dl.dropboxusercontent.com/scl/fi/k5anr05xp6hqmiltvmejc/01-Everybody-s-Free-To-Wear-Sunscreen-Edit.mp3?rlkey=1r8dma9sm32jbm6qj6ao2hqhy&st=6gyim8to&dl=00",
   },
   {
@@ -258,11 +327,6 @@ const songs = [
     file: "https://dl.dropboxusercontent.com/scl/fi/l6s03tgfzez0lt1i4mjh5/58-Crazy-Little-Thing-Called-Love-2.mp3?rlkey=yaunlu8z0qw0ssb3psubxzl4o&st=xaz26aq5&dl=0",
   },
   {
-    name: "We Are The Champions",
-    artist: "Queen",
-    file: "https://dl.dropboxusercontent.com/scl/fi/fl063q39qp0rdi1wxlymq/17-We-Are-the-Champions.mp3?rlkey=jzecp7cormbp1gnip0x4w7rjw&st=nv1rq9v1&dl=0",
-  },
-  {
     name: "Songbird",
     artist: "Fleetwood Mac",
     file: "https://dl.dropboxusercontent.com/scl/fi/dodn7txt4wob7xzy9i4q5/12-Songbird.mp3?rlkey=gayzp0waxt5s37a5u1bwefbl5&st=pq2n2r72&dl=0",
@@ -276,11 +340,6 @@ const songs = [
     name: "Love So Right",
     artist: "BeeGees",
     file: "https://dl.dropboxusercontent.com/scl/fi/kb06pliy5cr25qyw6ebn6/07-Love-So-Right.mp3?rlkey=wbemn1hvqc6f2dmz8k4vuaftf&st=ds8dvde6&dl=0",
-  },
-  {
-    name: "Don't Stop Me Now",
-    artist: "Queen",
-    file: "https://dl.dropboxusercontent.com/scl/fi/5kwogfiq2s36duvzz1ucj/07-Don-t-Stop-Me-Now.mp3?rlkey=3y8illq1qg8ridtnebuz63b6y&st=4j803n7e&dl=0",
   },
   {
     name: "You're My Best Friend",
