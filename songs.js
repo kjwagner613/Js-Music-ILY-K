@@ -7,16 +7,16 @@ const songs = [
     file: "https://dl.dropboxusercontent.com/scl/fi/wr7si14dc08ehur8hj0qw/03-Natalie-Merchant-Beloved-Wife.mp3?rlkey=g2isx2n4n8ii1w81rhw6cu5u8&st=vkdfiazj&dl=0",
     play: true,
   },
-  {
+  {  
     name: "Home",
     artist: "Edward Sharpe & The Magnetic Zeros",
-    file: "https://dl.dropboxusercontent.com/scl/fi/3jnhjr8hm81y1f70mbt3j/I-Feel-Love-Donna-Summer.mp4?rlkey=n44j4o5ir65kb3o3gcbdza2j6&st=bnwbsof8&dl=0",
+    file: "https://dl.dropboxusercontent.com/scl/fi/3znyn7c2q03ot47f5db4x/Home.mp3?rlkey=tkjrxkkyf98yg3jbnmbsc4pyx&st=eyjxjewu&dl=0",
     play: true,
   },
-    {
+    {  
     name: "I Feel Love",
     artist: "Donna Summer",
-    file: "https://dl.dropboxusercontent.com/scl/fi/3znyn7c2q03ot47f5db4x/Home.mp3?rlkey=tkjrxkkyf98yg3jbnmbsc4pyx&st=eyjxjewu&dl=0",
+    file: "https://dl.dropboxusercontent.com/scl/fi/3jnhjr8hm81y1f70mbt3j/I-Feel-Love-Donna-Summer.mp4?rlkey=n44j4o5ir65kb3o3gcbdza2j6&st=jktvhmf4&dl=0",
     play: true,
   },
   {
