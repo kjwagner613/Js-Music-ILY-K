@@ -1,4 +1,4 @@
-//updated 6/26/2025
+//updated 12/01/2025
 // Joannes Playlist
 const songs = [
   {
@@ -10,6 +10,12 @@ const songs = [
   {
     name: "Home",
     artist: "Edward Sharpe & The Magnetic Zeros",
+    file: "https://dl.dropboxusercontent.com/scl/fi/3jnhjr8hm81y1f70mbt3j/I-Feel-Love-Donna-Summer.mp4?rlkey=n44j4o5ir65kb3o3gcbdza2j6&st=bnwbsof8&dl=0",
+    play: true,
+  },
+    {
+    name: "I Feel Love",
+    artist: "Donna Summer",
     file: "https://dl.dropboxusercontent.com/scl/fi/3znyn7c2q03ot47f5db4x/Home.mp3?rlkey=tkjrxkkyf98yg3jbnmbsc4pyx&st=eyjxjewu&dl=0",
     play: true,
   },
