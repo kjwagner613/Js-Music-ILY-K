@@ -16,7 +16,7 @@ const songs = [
     {  
     name: "I Feel Love",
     artist: "Donna Summer",
-    file: "https://dl.dropboxusercontent.com/scl/fi/7veoyv9hns972nm3ixm0k/Donna-Summer-I-Feel-Love-Official-Music-Video.mp3?rlkey=na3lmvjyvvjo2uc4xx5d1v2d0&st=rr1dqkdm&dl=0",
+    file: "https://dl.dropboxusercontent.com/scl/fi/8k3qbh5doqix5tk0rzqsy/i-Feel-Love-DS.mp3?rlkey=2ut9uj4u23f5e2yqpz62tlh07&st=ofamlfgb&dl=0",
     play: true,
   },
   {
