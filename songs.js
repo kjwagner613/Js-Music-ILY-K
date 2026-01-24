@@ -1,19 +1,25 @@
-//updated 12/01/2025
+//updated 01/23/2026
 // Joannes Playlist
 const songs = [
+  {
+    name: "Stay Out Of AA",
+    artist: "Walker Hayes",
+    file: "https://dl.dropboxusercontent.com/scl/fi/ztxtfks9ug76ffihmh3ly/1-61-AA.mp3?rlkey=51a20h2rl9mfrqpe44yfvwnh2&st=v763nyyf&dl=0",
+    play: true,
+  },
   {
     name: "Beloved Wife",
     artist: "Natalie Merchant",
     file: "https://dl.dropboxusercontent.com/scl/fi/wr7si14dc08ehur8hj0qw/03-Natalie-Merchant-Beloved-Wife.mp3?rlkey=g2isx2n4n8ii1w81rhw6cu5u8&st=vkdfiazj&dl=0",
     play: true,
   },
-  {  
+  {
     name: "Home",
     artist: "Edward Sharpe & The Magnetic Zeros",
     file: "https://dl.dropboxusercontent.com/scl/fi/3znyn7c2q03ot47f5db4x/Home.mp3?rlkey=tkjrxkkyf98yg3jbnmbsc4pyx&st=eyjxjewu&dl=0",
     play: true,
   },
-    {  
+  {
     name: "I Feel Love",
     artist: "Donna Summer",
     file: "https://dl.dropboxusercontent.com/scl/fi/8k3qbh5doqix5tk0rzqsy/i-Feel-Love-DS.mp3?rlkey=2ut9uj4u23f5e2yqpz62tlh07&st=ech0puar&dl=0",
