@@ -1,6 +1,48 @@
-//updated 01/23/2026
+//updated 02/17/26
 // Joannes Playlist
 const songs = [
+    {
+    name: "Mama's Broken Heart",
+    artist: "Miranda Lambert",
+    file: "https://dl.dropboxusercontent.com/scl/fi/4n6imv3231b53fc6p8j6v/Mama-s-Broken-Heart.mp3?rlkey=74k0dfq1jnt194cj8uhy75c2n&st=saojb5mx&dl=0",
+    play: true,
+  },
+    {
+    name: "Flowers",
+    artist: "Miley Cyrus",
+    file: "https://dl.dropboxusercontent.com/scl/fi/2un807kcg3v3pntrionzz/01-Flowers.mp3?rlkey=v19gxvsa483vgmz6c92a4dfzu&st=b5mo07b1&dl=0",
+    play: true,
+  },
+    {
+    name: "Photograph",
+    artist: "Ed Sheeran",
+    file: "https://dl.dropboxusercontent.com/scl/fi/3cv0umfromxn7xtekbof3/1-06-Photograph.mp3?rlkey=tmx8vzu5r0x7a7rnf36v1yr82&st=igt5t2ar&dl=0",
+    play: true,
+  },
+    {
+    name: "Tennessee Whiskey",
+    artist: "Chris Stapleton",
+    file: "https://dl.dropboxusercontent.com/scl/fi/k7leo8b47g74pbxfzdrko/Chris-Stapleton-Tennessee-Whiskey-Official-Audio.mp3?rlkey=now0jllpsyhl0hxyltj2t0ni1&st=9xtsh2hj&dl=0",
+    play: true,
+  },
+    {
+    name: "Shape Of You",
+    artist: "Ed Sheeran",
+    file: "https://dl.dropboxusercontent.com/scl/fi/110p94t794su1tj20crxp/1-01-Shape-of-You-feat.-Nyla-Kran.mp3?rlkey=pbllgq69pigjl44w6ly478ul5&st=n8c4pyly&dl=0",
+    play: true,
+  },
+    {
+    name: "Play Me",
+    artist: "Neil Diamond",
+    file: "https://dl.dropboxusercontent.com/scl/fi/o8mn5iis68xrlj99qto17/2-12-Play-Me.mp3?rlkey=7aka6ji6ti7uxqe1haj7ht266&st=mq6p3g64&dl=0",
+    play: true,
+  },
+    {
+    name: "Thinking Out Loud",
+    artist: "Ed Sheeran",
+    file: "https://dl.dropboxusercontent.com/scl/fi/ktjo9iji60ewavn5wlxib/11-Thinking-Out-Loud.mp3?rlkey=0whph12ei0wa09vuy6kiqihtz&st=r64riq81&dl=0",
+    play: true,
+  },
   {
     name: "Stay Out Of AA",
     artist: "Walker Hayes",
