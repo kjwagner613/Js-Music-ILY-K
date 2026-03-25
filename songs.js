@@ -1,6 +1,18 @@
-//updated 03/23/26
+//updated 03/24/26
 // Joannes Playlist
 const songs = [
+    {
+    name: "Love On The Rocks",
+    artist: "Neil Diamond",
+    file: "https://dl.dropboxusercontent.com/scl/fi/h1fa284rji3hbxblximzd/Love-On-The-Rocks.mp3?rlkey=gserdgnu5xe7xnl2lep0gvkgo&st=qytv44c1&dl=0",
+    play: true,
+  },
+    {
+    name: "Shilo",
+    artist: "Neil Diamond",
+    file: "https://dl.dropboxusercontent.com/scl/fi/zswolje52mck13hnmlyv4/03.-Shilo.mp3?rlkey=5uhfmgr8eipebd2wj9027wc15&st=563ca3nz&dl=0",
+    play: true,
+  },
   {
     name: "Last Dance",
     artist: "Donna Summer",
