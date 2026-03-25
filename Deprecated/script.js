@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const audioPlayer = document.getElementById("audioPlayer");
   const statusDisplay = document.getElementById("status");
-  const playerHeadImage = document.getElementById("playerHeadImage");
   statusDisplay.textContent = "Paused";
   const currentSongDisplay = document.getElementById("current-song");
   const playerContainer = document.querySelector(".player-container");
@@ -145,149 +144,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function handlePlayerAction(action) {
-    if (currentPlaylistType === 'soundcloud' && soundcloudWidget) {
-      // Handle SoundCloud controls
-      switch (action) {
-        case 'prev':
-          soundcloudWidget.prev();
-          break;
-        case 'play':
-          soundcloudWidget.play();
-          break;
-        case 'pause':
-          soundcloudWidget.pause();
-          break;
-        case 'next':
-          soundcloudWidget.next();
-          break;
-        case 'songlist':
-          localStorage.setItem("currentPlaylistKey", playlistSelector.value);
-          window.location.href = 'songlist.html';
-          break;
-        case 'medallion':
-          alert('Medallion feature coming soon!');
-          break;
-        default:
-          console.warn('Unknown action:', action);
-      }
-    } else {
-      // Handle local file controls
-      switch (action) {
-        case 'prev':
-          playPrevSong();
-          break;
-        case 'play':
-          audioPlayer.play();
-          break;
-        case 'pause':
-          audioPlayer.pause();
-          break;
-        case 'next':
-          playNextSong();
-          break;
-        case 'songlist':
-          localStorage.setItem("currentPlaylistKey", playlistSelector.value);
-          window.location.href = 'songlist.html';
-          break;
-        case 'medallion':
-          alert('Medallion feature coming soon!');
-          break;
-        default:
-          console.warn('Unknown action:', action);
-      }
-    }
-  }
+  document.querySelectorAll('area[data-action]').forEach(area => {
+    area.addEventListener('click', function (event) {
+      event.preventDefault();
+      const action = this.getAttribute('data-action');
 
-  // Support controls from both image-map areas and regular elements
-  document.querySelectorAll('[data-action]').forEach((control) => {
-    control.addEventListener('click', function (event) {
-      if (control.tagName === 'AREA' || control.tagName === 'A') {
-        event.preventDefault();
-      }
-      handlePlayerAction(this.getAttribute('data-action'));
-    });
-  });
-
-  document.querySelectorAll('.control-hotspot').forEach((control) => {
-    control.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        handlePlayerAction(control.getAttribute('data-action'));
-      }
-    });
-  });
-
-  // Keyboard activation for clickable medallion image
-  const medallionButton = document.getElementById('medallionButton');
-  if (medallionButton) {
-    medallionButton.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        handlePlayerAction('medallion');
-      }
-    });
-  }
-
-  // Keep image-map coordinates aligned as player head image scales
-  const mappedAreas = Array.from(document.querySelectorAll('map[name="image-map"] area[coords]'));
-  mappedAreas.forEach((area) => {
-    area.dataset.originalCoords = area.coords;
-  });
-
-  function resizeMappedAreas() {
-    if (!playerHeadImage || !playerHeadImage.naturalWidth || !playerHeadImage.naturalHeight) {
-      return;
-    }
-    if (!playerHeadImage.clientWidth || !playerHeadImage.clientHeight) {
-      return;
-    }
-
-    const scaleX = playerHeadImage.clientWidth / playerHeadImage.naturalWidth;
-    const scaleY = playerHeadImage.clientHeight / playerHeadImage.naturalHeight;
-    const radiusScale = (scaleX + scaleY) / 2;
-
-    mappedAreas.forEach((area) => {
-      const original = (area.dataset.originalCoords || "").split(',').map(Number);
-      if (!original.length || original.some(Number.isNaN)) {
-        return;
-      }
-
-      let scaled = [];
-      if (area.shape === 'circle' && original.length >= 3) {
-        scaled = [
-          Math.round(original[0] * scaleX),
-          Math.round(original[1] * scaleY),
-          Math.round(original[2] * radiusScale)
-        ];
-      } else if (area.shape === 'rect' && original.length >= 4) {
-        scaled = [
-          Math.round(original[0] * scaleX),
-          Math.round(original[1] * scaleY),
-          Math.round(original[2] * scaleX),
-          Math.round(original[3] * scaleY)
-        ];
+      if (currentPlaylistType === 'soundcloud' && soundcloudWidget) {
+        // Handle SoundCloud controls
+        switch (action) {
+          case 'prev':
+            soundcloudWidget.prev();
+            break;
+          case 'play':
+            soundcloudWidget.play();
+            break;
+          case 'pause':
+            soundcloudWidget.pause();
+            break;
+          case 'next':
+            soundcloudWidget.next();
+            break;
+          case 'songlist':
+            localStorage.setItem("currentPlaylistKey", playlistSelector.value);
+            window.location.href = 'songlist.html';
+            break;
+          case 'medallion':
+            alert('Medallion feature coming soon!');
+            break;
+          default:
+            console.warn('Unknown action:', action);
+        }
       } else {
-        scaled = original.map((value, index) => {
-          return Math.round(value * (index % 2 === 0 ? scaleX : scaleY));
-        });
+        // Handle local file controls
+        switch (action) {
+          case 'prev':
+            playPrevSong();
+            break;
+          case 'play':
+            audioPlayer.play();
+            break;
+          case 'pause':
+            audioPlayer.pause();
+            break;
+          case 'next':
+            playNextSong();
+            break;
+          case 'songlist':
+            localStorage.setItem("currentPlaylistKey", playlistSelector.value);
+            window.location.href = 'songlist.html';
+            break;
+          case 'medallion':
+            alert('Medallion feature coming soon!');
+            break;
+          default:
+            console.warn('Unknown action:', action);
+        }
       }
-
-      area.coords = scaled.join(',');
     });
-  }
-
-  if (playerHeadImage) {
-    if (playerHeadImage.complete) {
-      resizeMappedAreas();
-    } else {
-      playerHeadImage.addEventListener('load', resizeMappedAreas);
-    }
-    window.addEventListener('load', resizeMappedAreas);
-    window.addEventListener('resize', resizeMappedAreas);
-    window.addEventListener('orientationchange', resizeMappedAreas);
-    setTimeout(resizeMappedAreas, 100);
-  }
+  });
 
 
 

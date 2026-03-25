@@ -3,52 +3,65 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=.5, user-scalable=yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
   <title>♥jS♥ music ♥Sj♥</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="./assets/KWJS.ico" />
 </head>
 
 <body>
-
   <div class="player-container">
-    <div class="lcd-display" id="lcdDisplay">
-      <span id="status">Paused</span><br />
-      <span id="current-song">No song playing</span><br />
-      <span id="playlist-name"></span>
-      <span id="playlist">Joanne's Playlist</span><br />
-      <select id="playlist-selector">
-        <option value="songs" selected>Joanne's Local</option>
-        <option value="songsKw">Kevin's Local</option>
-        <option value="joanneCloud">Joanne's SoundCloud</option>
-        <option value="kevinCloud">Kevin's SoundCloud</option>
-      </select>
+    <img src="assets/joanne.png" class="player-segment joanne-image" alt="Joanne artwork" />
+
+    <div class="player-head-wrap">
+      <div class="lcd-display" id="lcdDisplay">
+        <span id="status">Paused</span><br />
+        <span id="current-song">No song playing</span><br />
+        <span id="playlist-name"></span>
+        <span id="playlist">Joanne's Playlist</span><br />
+        <select id="playlist-selector">
+          <option value="songs" selected>Joanne's Local</option>
+          <option value="songsKw">Kevin's Local</option>
+          <option value="joanneCloud">Joanne's SoundCloud</option>
+          <option value="kevinCloud">Kevin's SoundCloud</option>
+        </select>
+      </div>
+
+      <img id="playerHeadImage" src="assets/playerHead.png" class="player-segment player-head-image" usemap="#image-map"
+        alt="Player head controls" />
+
+      <div class="transport-hotspots" aria-label="Transport controls">
+        <div class="control-hotspot hotspot-prev" data-action="prev" role="button" tabindex="0" aria-label="Previous"></div>
+        <div class="control-hotspot hotspot-play" data-action="play" role="button" tabindex="0" aria-label="Play"></div>
+        <div class="control-hotspot hotspot-pause" data-action="pause" role="button" tabindex="0" aria-label="Pause"></div>
+        <div class="control-hotspot hotspot-next" data-action="next" role="button" tabindex="0" aria-label="Next"></div>
+      </div>
+
+      <map name="image-map">
+        <area alt="Previous" title="Previous" href="#" coords="79,420,52" shape="circle" data-action="prev" />
+        <area alt="Play" title="Play" href="#" coords="224,420,52" shape="circle" data-action="play" />
+        <area alt="Pause" title="Pause" href="#" coords="366,420,53" shape="circle" data-action="pause" />
+        <area alt="Next" title="Next" href="#" coords="510,420,50" shape="circle" data-action="next" />
+      </map>
+
+      <audio id="audioPlayer" controls></audio>
+
+      <!-- Hidden SoundCloud widget for SoundCloud playlists -->
+      <div id="soundcloud-container" style="display: none; text-align: center;">
+        <iframe id="soundcloud-widget" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+          src=""></iframe>
+      </div>
     </div>
-    <img src="assets/newPlayerHead.png" usemap="#image-map" />
-    <map name="image-map">
-      <area alt="Previous" title="Previous" coords="135,677,63" shape="circle" data-action="prev" />
-      <area alt="Play" title="Play" coords="281,674,72" shape="circle" data-action="play" />
-      <area alt="Pause" title="Pause" coords="425,676,66" shape="circle" data-action="pause" />
-      <area alt="Next" title="Next" coords="572,673,68" shape="circle" data-action="next" />
-      <area alt="Song-List" title="Song-List" coords="217,892,496,1027" shape="rect" data-action="songlist" />
-      <area alt="Medallion" title="Medallion" coords="357,1296,198" shape="circle" data-action="medallion" />
-    </map>
 
-    <audio id="audioPlayer" controls></audio>
-
-    <!-- Hidden SoundCloud widget for SoundCloud playlists -->
-    <div id="soundcloud-container" style="display: none; text-align: center;">
-      <iframe id="soundcloud-widget" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-        src=""></iframe>
-    </div>
-
-    <script src="https://w.soundcloud.com/player/api.js"></script>
-    <script src="songs.js"></script>
-    <script src="songs-ks.js"></script>
-    <script src="script.js"></script>
-
-
+    <a href="songlist.html" id="songList" data-action="songlist">Song List</a>
+    <img src="assets/medallion.png" id="medallionButton" class="player-segment medallion-image" alt="Medallion"
+      data-action="medallion" role="button" tabindex="0" />
   </div>
+
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script src="songs.js"></script>
+  <script src="songs-ks.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

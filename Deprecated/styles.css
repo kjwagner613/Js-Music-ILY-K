@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+@font-face {
+  font-family: "Digital-7";
+  src: url("./assets/Digital-7 Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(242, 135, 219);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin: 0 auto;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 13px solid rgb(237, 181, 225);
+  overflow-y: hidden;
+}
+
+.song-list-container {
+  max-width: 400px;
+}
+
+#song-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player-container {
+  width: 90vw;
+  max-width: 700px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  border: 3px solid rgb(237, 181, 225);
+}
+
+.player-image {
+  width: 100%;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 16px #ed126d;
+}
+
+.lcd-display {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 15%;
+  background: #222;
+  color: rgb(255, 0, 200);
+  font-family: "Digital-7", monospace, Arial, sans-serif;
+  font-size: 2em;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 0, 200);
+  text-align: center;
+  box-shadow: 0 0 10px rgb(255, 0, 200);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.3em 0;
+  margin-bottom: 0.5em;
+}
+
+.status-display {
+  font-size: 0.7em;
+  color: #0f0;
+}
+
+#audioPlayer {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50.5%;
+  transform: translateX(-50%);
+  height: 5%;
+  width: 85%;
+  border-radius: 8px;
+  background: #fff;
+  border: 2px solid rgb(255, 0, 200);
+  box-shadow: 0 2px 8px rgb(255, 0, 200);
+  pointer-events: auto;
+}
+
+button {
+  background-color: #ef0ed4;
+  border: solid;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  border-color: #f70084;
+  margin-top: 10px;
+  width: 75vw;
+  max-width: 300px;
+}
+
+/* Song list specific button styling */
+#song-list button {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.fancy-script {
+  font-family: "Great Vibes", cursive;
+  font-size: 7vh;
+  color: #dfe7ef;
+  text-shadow: 1px 1px 2px rgb(17, 16, 16), 0 0 1em rgb(24, 24, 25),
+    0 0 0.2em rgb(17, 17, 19);
+  margin-top: 1em;
+  text-align: center;
+}
+
+/* Playlist selector styling */
+#playlist-selector {
+  background: #333;
+  color: rgb(255, 0, 200);
+  border: 1px solid rgb(255, 0, 200);
+  border-radius: 4px;
+  padding: 5px;
+  font-family: "Digital-7", monospace, Arial, sans-serif;
+  font-size: 0.8em;
+  width: 100%;
+  margin-top: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#playlist-selector option {
+  background: #333;
+  color: rgb(255, 0, 200);
+  padding: 5px;
+  text-align: center;
+}
+
+#playlist-selector:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(255, 0, 200);
+}
+
+/* SoundCloud container styling */
+#soundcloud-container {
+  position: absolute;
+  top: 96%;
+  left: 0%;
+
+  width: 85%;
+  height: 16px;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 0, 200);
+  box-shadow: 0 2px 8px rgb(255, 0, 200);
+  transform: scale(0.5);
+  overflow: hidden;
+}
+
+#soundcloud-widget {
+  border-radius: 6px;
+}
+
+@media (max-width: 500px) {
+  .lcd-display {
+    font-size: 1.2em;
+  }
+  .player-container {
+    min-width: 0;
+  }
+}
