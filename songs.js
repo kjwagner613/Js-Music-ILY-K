@@ -27,12 +27,6 @@ const songs = [
     play: true,
   },
   {
-    name: "Fading Into the Night",
-    artist: "Sia Ft. Imagine Dragons",
-    file: "https://dl.dropboxusercontent.com/scl/fi/80m09bktc4v50klt8d0h4/Sia-Ft.-Imagine-Dragons-Fading-Into-the-Night.mp3?rlkey=oiyyecj5bhq9ykgwe146iwmkj&st=yiipkwkd&dl=0",
-    play: true,
-  },
-  {
     name: "Born to Run",
     artist: "Sia",
     file: "https://dl.dropboxusercontent.com/scl/fi/t1sgw8iajg6534gcakn4x/Sia-Born-To-Run-New-2026-Unreleased.mp3?rlkey=w28uehpzoyfu7n5cg1sai4l65&st=rs73ysex&dl=0",
