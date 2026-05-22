@@ -3,7 +3,7 @@
 const songs = [
   {
     name: "Happy",
-    artist: "Sia",
+    artist: "Pharrell Williams",
     file: "https://dl.dropboxusercontent.com/scl/fi/ooyyzzc1wc9w5apo0nlga/Happy.mp3?rlkey=jl39ijibga3iwmquulb4snt9c&st=pmcqulz0&dl=0",
     play: true,
   },
