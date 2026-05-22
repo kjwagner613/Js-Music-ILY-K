@@ -1,14 +1,19 @@
-//updated 05/07/26
+//updated 05/21/26
 // Joannes Playlist
 const songs = [
-  
-    {
+  {
+    name: "Happy",
+    artist: "Sia",
+    file: "https://dl.dropboxusercontent.com/scl/fi/ooyyzzc1wc9w5apo0nlga/Happy.mp3?rlkey=jl39ijibga3iwmquulb4snt9c&st=pmcqulz0&dl=0",
+    play: true,
+  },
+  {
     name: "Run Run Run",
     artist: "Sia",
     file: "https://dl.dropboxusercontent.com/scl/fi/15x1n38f44u2gs812d4al/Sia-Run-Run-Run.mp3?rlkey=fspjr9s373zo0hd7zmq7pd5vc&st=wz1pzz13&dl=0",
     play: true,
   },
-    {
+  {
     name: "Skeletons",
     artist: "Sia",
     file: "https://dl.dropboxusercontent.com/scl/fi/515smebobl018dfed9dfe/Sia-Skeletons.mp3?rlkey=cflvfaunt3onknyh6fbgd44j8&st=9o2vtfri&dl=0",
